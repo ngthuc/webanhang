@@ -46,14 +46,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 body {
-    padding-top: 80px;
-    font-size: 15px;
+    font-size: 14px;
     color: #34495e;
-    background: #f5f5f5;
-    font-family: Calibri, sans-serif
+    background: #fafafa;
+    font-family: Tahoma, sans-serif;
 }
 
-body h1, body h2, body h3, body h4, body .created {
+body h1, body h2, body h3, body h4, body .created, body h5, body h6 {
+    font-family: Calibri, sans-serif;
     font-weight: 600
 }
 
@@ -88,7 +88,7 @@ body h3, body h4 {
 }
 
 .btn.btn-link {
-    color: #2dcc70;
+    color: #2294d2;
     padding: 0
 }
 
@@ -97,15 +97,15 @@ body h3, body h4 {
 }
 
 .btn-primary {
-    background-color: #2dcc70
+    background-color: #2294d2
 }
 
 .btn-primary:hover {
-    background-color: #24a259
+    background-color: #2294d2
 }
 
 a {
-    color: #2dcc70;
+    color: #2294d2;
     -webkit-transition: 300ms;
     -moz-transition: 300ms;
     -o-transition: 300ms;
@@ -113,7 +113,7 @@ a {
 }
 
 a:hover, a:focus {
-    color: #005580;
+    color: #2294d2;
     text-decoration: none;
     outline: 0
 }
@@ -132,13 +132,13 @@ body > section#slide-show {
 }
 
 #recent-works {
-    background: #2dcc70;
-    color: #fff
+    background: #fafafa;
+    border-top: solid 1px #ddd
 }
 
 #recent-works .links > a {
     background: #fff;
-    color: #2dcc70;
+    color: #2294d2;
     text-shadow: none
 }
 
@@ -175,7 +175,7 @@ body > section#slide-show {
 }
 
 .title {
-    background: #2dcc70;
+    background: #2294d2;
     color: #fff;
     padding: 20px 0
 }
@@ -306,7 +306,6 @@ header.navbar .nav {
 header.navbar .nav > li {
     margin-left: 1px
 }
-
 header.navbar .nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -317,7 +316,7 @@ header.navbar .nav > li > a {
 
 header.navbar .nav > li > a:hover {
     background: transparent;
-    color: #2dcc70;
+    color: #2294d2;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none
@@ -325,7 +324,7 @@ header.navbar .nav > li > a:hover {
 
 header.navbar .nav > li.active > a, header.navbar .nav > li.active > a:hover {
     background: transparent;
-    color: #2dcc70;
+    color: #2294d2;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none
@@ -333,7 +332,7 @@ header.navbar .nav > li.active > a, header.navbar .nav > li.active > a:hover {
 
 header.navbar .nav > li.dropdown.open > a.dropdown-toggle {
     background: transparent;
-    color: #2dcc70
+    color: #2294d2
 }
 
 header.navbar .nav > li.login > a {
@@ -351,7 +350,7 @@ header .dropdown-menu:before {
 
 .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
     background-color: transparent;
-    color: #2dcc70
+    color: #2294d2
 }
 
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
@@ -361,7 +360,7 @@ header .dropdown-menu:before {
 }
 
 .navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
-    color: #2dcc70
+    color: #2294d2
 }
 
 .dropdown-menu {
@@ -380,7 +379,7 @@ header .dropdown-menu:before {
     padding: 5px 15px 7px !important
 }
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a {
-    background: #24a259
+    background: #2294d2
 }
 
 .main-info {
@@ -398,7 +397,7 @@ header .dropdown-menu:before {
     line-height: 18px;
     text-align: center;
     display: inline-block;
-    background: #2dcc70;
+    background: #2294d2;
     padding: 10px;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
@@ -506,7 +505,7 @@ header .dropdown-menu:before {
 
 #main-contents .blog-news .created {
     font-size: 18px;
-    color: #2dcc70
+    color: #2294d2
 }
 
 .registration-form {
@@ -539,7 +538,7 @@ header .dropdown-menu:before {
 }
 
 #bottom a:hover {
-    color: #2dcc70
+    color: #2294d2
 }
 
 #bottom ul.address > li {
@@ -617,7 +616,7 @@ ul.rss li::before {
 }
 
 #footer a:hover {
-    color: #2dcc70
+    color: #2294d2
 }
 
 #footer #gototop {
@@ -720,7 +719,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 }
 
 select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
-    border-color: #2dcc70;
+    border-color: #2294d2;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none
@@ -739,9 +738,10 @@ textarea#message {
     margin-bottom: 30px
 }
 
-.widget > h3 {
-    font-size: 16px;
-    margin-top: 0
+.widget > h1 {
+    font-size: 22px;
+    margin-top: 0;
+    border-bottom: solid 2px #ddd
 }
 
 .widget h5 {
@@ -751,7 +751,7 @@ textarea#message {
 .widget .date {
     margin-top: 5px;
     padding: 8px 10px;
-    background: #2dcc70
+    background: #2294d2
 }
 
 .widget .date > span {
@@ -810,7 +810,7 @@ textarea#message {
 }
 
 #pricing-table .plan1 {
-    background: #1abc9c
+    background: #26a5ea
 }
 
 #pricing-table .plan2 {
@@ -905,7 +905,7 @@ ul.gallery li .preview .links > a {
     line-height: 40px;
     display: inline-block;
     text-align: center;
-    background: #2dcc70;
+    background: #2294d2;
     color: #fff;
     text-shadow: 0 1px rgba(0, 0, 0, 0.3);
     font-size: 18px;
@@ -945,7 +945,7 @@ ul.faq li span.number {
     height: 50px;
     line-height: 50px;
     text-align: center;
-    background: #2dcc70;
+    background: #2294d2;
     color: #fff;
     font-size: 24px
 }
@@ -965,4 +965,79 @@ ul.faq li > div h3 {
 }
 #checkout-form>.span6 {
     font-size: 17px
+}
+#gift {
+    background: #fff;
+    border-top: solid 1px #ddd
+}
+.big-sale>h3>a {
+    color: #fff;
+    display: inline-block;
+    background: #ed2024;
+    padding: 10px 25px 7px;
+    border-radius: 2px;
+    border-bottom: solid 5px #d1272a
+}
+.clock>li {
+    display: inline-block;
+    background: #2194d2;
+    color: #fff;
+    padding: 10px 25px 8px;
+    margin: 10px;
+    font-size: 18px
+}
+.clock>li:hover {
+    background: #ed2024
+}
+.clock>li>p:first-child {font-size: 22px; font-weight: bold}
+.my-note {font-size: 18px}
+#search-box {
+    background: #fff;
+    margin:0;
+    padding: 0;
+    width: 99%;
+    height: 50px;
+    border: solid 1px #ddd
+}
+#search-text {
+    border: none;
+    width: 82%;
+    height: 100%;
+    display: block;
+    float: left;
+}
+#search-submit {
+    border: none;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: left;
+}
+#search-submit>i {
+    font-size: 20px;
+    line-height: 50px;
+}
+.widget>ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.widget>ul>li {border-bottom: dotted 1px #ddd}
+.widget>ul>li>a {
+    padding: 8px 0px;
+    display: block;
+    padding-left: 18px;
+    background: url(images/li.png) left 13px no-repeat;
+}
+.tagcloud a {
+    background: #2194d2;
+    color: #fff;
+    border-radius: 1px;
+    padding: 0px 7px;
+    line-height: 20px;
+    display: inline-block;
+}
+.tagcloud a:hover {
+    background: #196d9b;
 }

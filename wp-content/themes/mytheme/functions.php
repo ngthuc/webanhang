@@ -24,8 +24,18 @@ function theme_slug_widgets_init() {
         'before_title' => '<h1>',
         'after_title' => '</h1>',
     ) );
+
+    register_sidebar( array(
+        'name' => __( 'Page Sidebar', 'theme-slug' ),
+        'id' => 'sidebar-2',
+        'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme-slug' ),
+        'before_title' => '<h1>',
+        'after_title' => '</h1>',
+    ) );
 }
 add_action( 'widgets_init', 'theme_slug_widgets_init' );
+
+
 
 // Clean up the <head>
 function removeHeadLinks() {
@@ -187,7 +197,7 @@ function set_template_image() {
         <?php if(isset($tpl_image)){ ?>
             <img id="show-tpl-imgurl" src="<?php echo $tpl_image; ?>" style="max-width: 810px; margin: 5px;" />
         <?php }else{ ?>
-            <img id="show-tpl-imgurl" src="<?php echo get_template_directory_uri() ?>/assets/images/templates/item3.jpg" style="" />
+            <img id="show-tpl-imgurl" src="<?php echo get_template_directory_uri() ?>/images/ico/icon.png" style="" />
         <?php } ?>
     </div>
     <script>

@@ -30,7 +30,7 @@
                         <i class="icon-globe icon-medium"></i>
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading">Website đầy đủ tính năng</h4>
+                        <h4 class="media-heading">Website bán hàng đầy đủ tính năng</h4>
                         <p>
                             Tích hợp đầy đủ các tính năng của một website bán hàng online, từ quản lý danh mục, sản phẩm, đơn đặt hàng,
                             các mặt hàng bán chạy, khuyến mại ... cho đến các chức năng bổ sung như chuyên mục tin tức, sự kiện.
@@ -57,13 +57,13 @@
             <div class="span4">
                 <div class="media">
                     <div class="pull-left">
-                        <i class="icon-leaf icon-medium icon-rounded"></i>
+                        <i class="icon-shopping-cart icon-medium"></i>
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading">Phù hợp với người Việt Nam</h4>
+                        <h4 class="media-heading">Thiết kế riêng cho việc bán hàng</h4>
                         <p>
-                            Thiết kế phù hợp với thẩm mỹ người Việt Nam nhưng vẫn đảm bảo tính hiện đại. Quy trình đặt mua hàng đơn giản.
-                            Admin đơn giản, vô cùng dễ sử dụng. Tài liệu hướng dẫn sử dụng ngắn gọn, dễ hiểu.
+                            Website chuẩn SEO, tích hợp sẵn quảng cáo Google Adwords. Miễn phí tài liệu hướng dẫn.
+                            Cam kết hỗ trợ 24/7 trong quá trình triển khai và hoạt động. Vui lòng tham khảo các gói dịch vụ đi kèm.
                         </p>
                     </div>
                 </div>
@@ -76,13 +76,13 @@
             <div class="span4">
                 <div class="media">
                     <div class="pull-left">
-                        <i class="icon-shopping-cart icon-medium"></i>
+                        <i class="icon-leaf icon-medium icon-rounded"></i>
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading">Tối ưu hóa cho việc bán hàng online</h4>
+                        <h4 class="media-heading">Phù hợp với người Việt Nam</h4>
                         <p>
-                            Website chuẩn SEO, tích hợp sẵn quảng cáo Google Adwords. Miễn phí tài liệu hướng dẫn.
-                            Cam kết hỗ trợ 24/7 trong quá trình triển khai và hoạt động. Vui lòng tham khảo các gói dịch vụ đi kèm.
+                            Thiết kế phù hợp với thẩm mỹ người Việt Nam nhưng vẫn đảm bảo tính hiện đại. Quy trình đặt mua hàng đơn giản.
+                            Admin đơn giản, vô cùng dễ sử dụng. Tài liệu hướng dẫn sử dụng ngắn gọn, dễ hiểu.
                         </p>
                     </div>
                 </div>
@@ -172,6 +172,23 @@
     </div>
 </section>
 <!--/Incentives-->
+
+<!--gift for customer-->
+<section id="gift">
+    <div class="container">
+        <div class="center gap">
+            <h3>VỚI IZIWEB, ĐĂNG KÝ CÓ WEBSITE NGAY, CHỈ VIỆC BÁN HÀNG</h3>
+            <div class="big-sale">
+                <h3><a href="#">KHUYẾN MẠI DUY NHẤT DỊP TẾT ẤT MÙI</a></h3>
+            </div>
+            <ul id="clock" class="clock unstyled">
+
+            </ul>
+            <p class="my-note">Giải pháp nhanh nhất, tốt nhất, rẻ nhất, dễ dàng nhất để tăng doanh số bán hàng nhanh chóng</p>
+        </div>
+    </div>
+</section>
+<!--/gift for customer-->
 
 <section id="recent-works">
     <div class="container">
