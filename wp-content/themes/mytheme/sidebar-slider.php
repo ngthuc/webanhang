@@ -6,40 +6,19 @@
         <div class="sl-slider">
             <!--Slider Item1-->
             <div class="sl-slide item1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
-                <div class="sl-slide-inner">
-                    <div class="container">
-                        <img class="pull-right" src="<?= bloginfo('template_directory') ?>/images/sample/slider/img1.png" alt="" />
-                        <h2>Creative Ideas</h2>
-                        <h3 class="gap">Tincidunt condimentum eros</h3>
-                        <a class="btn btn-large btn-transparent" href="#">Learn More</a>
-                    </div>
-                </div>
+                <img class="pull-right" src="<?= bloginfo('template_directory') ?>/images/slider/1.jpg" alt="" />
             </div>
             <!--/Slider Item1-->
 
             <!--Slider Item2-->
             <div class="sl-slide item2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
-                <div class="sl-slide-inner">
-                    <div class="container">
-                        <img class="pull-right" src="<?= bloginfo('template_directory') ?>/images/sample/slider/img2.png" alt="" />
-                        <h2>Planning &amp; Analysis</h2>
-                        <h3 class="gap">Aenean ultricies mi vitast</h3>
-                        <a class="btn btn-large btn-transparent" href="#">Learn More</a>
-                    </div>
-                </div>
+                <img class="pull-right" src="<?= bloginfo('template_directory') ?>/images/slider/2.jpg" alt="" />
             </div>
             <!--Slider Item2-->
 
             <!--Slider Item3-->
             <div class="sl-slide item3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
-                <div class="sl-slide-inner">
-                    <div class="container">
-                        <img class="pull-right" src="<?= bloginfo('template_directory') ?>/images/sample/slider/img3.png" alt="" />
-                        <h2>Unique Solutions</h2>
-                        <h3 class="gap">Breatures who have been utterly</h3>
-                        <a class="btn btn-large btn-transparent" href="#">Learn More</a>
-                    </div>
-                </div>
+                <img class="pull-right" src="<?= bloginfo('template_directory') ?>/images/slider/3.jpg" alt="" />
             </div>
             <!--Slider Item3-->
 

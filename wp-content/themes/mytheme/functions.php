@@ -121,7 +121,7 @@ function the_breadcrumb() {
             echo "<li>Blog Archives";
             echo'</li>';
         } elseif (is_search()) {
-            echo"<li>Search Results";
+            echo"<li>Tìm kiếm";
             echo'</li>';
         }
     }

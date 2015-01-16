@@ -17,9 +17,9 @@
                         <a href="<?php the_permalink() ?>"><h2><?php the_title(); ?></h2></a>
                         <div class="blog-meta clearfix">
                             <p class="pull-left">
-                                <i class="icon-user"></i> by <a href="#"><?php the_author(); ?></a> | <i class="icon-folder-close"></i> Category <a href="#"></a> | <i class="icon-calendar"></i> <?php the_date() ?>
+                                <i class="icon-user"></i> by <a href="<?php the_author_link() ?>"><?php the_author(); ?></a> | <i class="icon-folder-close"></i> Category <a href="#"><?php the_category(' ') ?></a> | <i class="icon-calendar"></i> <?php the_date() ?>
                             </p>
-                            <p class="pull-right"><i class="icon-comment pull"></i> <a href="blog-item.html#comments">3 Comments</a></p>
+                            <p class="pull-right"><i class="icon-comment pull"></i> <?php echo get_comments_number() ?> Comments</p>
                         </div>
                         <p><?php the_excerpt() ?></p>
                         <a class="btn btn-link" href="<?php the_permalink() ?>">Read More <i class="icon-angle-right"></i></a>
@@ -51,4 +51,5 @@
         </aside>
     </div>
 </section>
+
 <?php get_footer(); ?>

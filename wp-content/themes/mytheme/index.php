@@ -176,15 +176,19 @@
 <!--gift for customer-->
 <section id="gift">
     <div class="container">
-        <div class="center gap">
-            <h3>VỚI IZIWEB, ĐĂNG KÝ CÓ WEBSITE NGAY, CHỈ VIỆC BÁN HÀNG</h3>
-            <div class="big-sale">
-                <h3><a href="#">KHUYẾN MẠI DUY NHẤT DỊP TẾT ẤT MÙI</a></h3>
-            </div>
-            <ul id="clock" class="clock unstyled">
+        <div class="row-fluid">
+            <div class="span8">
+                <div class="center">
+                    <h3 class="gift-title">VỚI IZIWEB, ĐĂNG KÝ CÓ WEBSITE NGAY, CHỈ VIỆC BÁN HÀNG</h3>
+                    <div class="big-sale">
+                        <h3><a href="#">KHUYẾN MẠI DUY NHẤT DỊP TẾT ẤT MÙI</a></h3>
+                    </div>
+                    <ul id="clock" class="clock unstyled">
 
-            </ul>
-            <p class="my-note">Giải pháp nhanh nhất, tốt nhất, rẻ nhất, dễ dàng nhất để tăng doanh số bán hàng nhanh chóng</p>
+                    </ul>
+                    <p class="my-note">Giải pháp nhanh nhất, tốt nhất, rẻ nhất, dễ dàng nhất để tăng doanh số bán hàng nhanh chóng</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>

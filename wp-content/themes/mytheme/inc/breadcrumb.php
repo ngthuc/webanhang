@@ -10,7 +10,7 @@
                     elseif (is_archive()) {
                         wp_title('');  }
                     elseif (is_search()) {
-                        echo 'Search for &quot;'.wp_specialchars($s).'&quot;'; }
+                        echo 'Tìm kiếm &quot;'.wp_specialchars($s).'&quot;'; }
                     elseif (is_page()) {
                         wp_title('');
                     }else if(is_single()){
