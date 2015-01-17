@@ -438,20 +438,20 @@ header .dropdown-menu:before {
     margin-right: 10px
 }
 
-#portfolio .modal {
+#portfolio .modal, #recent-works .modal {
     position: absolute;
     width: 100%;
     margin-left: 0;
     left: 0;
     border-radius: 0;
 }
-#portfolio .modal .modal-body {
+#portfolio .modal .modal-body, #recent-works .modal .modal-body {
     padding: 0;
     max-height: none;
     width: 100%;
     text-align: center;
 }
-#portfolio .modal .modal-body img {
+#portfolio .modal .modal-body img, #recent-works .modal .modal-body img {
     max-width: 100%;
 }
 .modal .icon-remove {

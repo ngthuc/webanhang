@@ -16,9 +16,14 @@
             <div class="row-fluid">
                 <div class="span1"><i class="icon-check"></i></div>
                 <div class="span7">
-                    <?php if(isset($_GET['tpl_id'])) $tpl_id = $_GET['tpl_id']; else $tpl_id=""; ?>
-                    Đã chọn giao diện mã số: <?php echo $tpl_id; ?>
-                    <input type="hidden" name="order-product-id" value="<?php echo $tpl_id ?>" />
+                    <?php if (isset($_GET['tpl_id'])): ?>
+                        Đã chọn giao diện mã số:
+                         <?= $_GET['tpl_id']; ?>
+                        <input type="hidden" name="order-product-id" value="<?= $_GET['tpl_id']; ?>">
+                    <?php else: ?>
+                        Bạn chưa chọn giao diện nào
+                        <a href="<?= home_url() ?>/?page_id=5">Chọn giao diện</a>
+                    <?php endif; ?>
                 </div>
                 <div class="span3"><strong>Miễn phí</strong></div>
                 <div class="span1"><a href="<?php echo home_url() ?>/?page_id=5" title="Đổi giao diện"><i class="icon-pencil"></i></a></div>
@@ -32,7 +37,7 @@
                 <div class="span1"><i class="icon-check"></i></div>
                 <div class="span7">Hosting băng thông không giới hạn</div>
                 <div class="span3"><strong>30k / tháng</strong></div>
-                <div class="span1"><a href="" title="Xem bảng giá"><i class="icon-list"></i></a></div>
+                <div class="span1"><a href="<?= home_url() ?>/?page_id=15" title="Xem bảng giá"><i class="icon-list"></i></a></div>
             </div>
             <div class="row-fluid">
                 <div class="span8 offset1">
@@ -47,7 +52,7 @@
                 <div class="span1"><i class="icon-check"></i></div>
                 <div class="span7">Tên miền quốc tế</div>
                 <div class="span3"><strong>20k / năm</strong></div>
-                <div class="span1"><a href="#" title="Kiểm tra tên miền"><i class="icon-search"></i></a></div>
+                <div class="span1"><a href="<?= home_url() ?>/?page_id=17" title="Kiểm tra tên miền"><i class="icon-search"></i></a></div>
             </div>
             <div class="row-fluid">
                 <div class="span7 offset1">

@@ -219,7 +219,7 @@
                 <div id="modal-1" class="modal hide fade">
                     <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
                     <div class="modal-body">
-                        <img src="<?php echo get_post_meta(get_the_ID(), 'template-image', true); ?>" alt=" " width="100%" style="max-height:400px">
+                        <img src="<?php echo get_post_meta(get_the_ID(), 'template-image', true); ?>" alt=" ">
                     </div>
                 </div>
             </li>
