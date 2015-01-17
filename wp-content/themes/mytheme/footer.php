@@ -168,68 +168,10 @@
 <script src="<?= bloginfo('template_directory') ?>/js/main.js"></script>
 <!-- Required javascript files for Slider -->
 <script src="<?= bloginfo('template_directory') ?>/js/jquery.ba-cond.min.js"></script>
-<script src="<?= bloginfo('template_directory') ?>/js/jquery.slitslider.js"></script>
 <script src="<?= bloginfo('template_directory') ?>/js/jquery.countdown.js"></script>
+<script src="<?= bloginfo('template_directory') ?>/js/slider.js"></script>
 <!-- /Required javascript files for Slider -->
 
-<!-- SL Slider -->
-<script type="text/javascript">
-    $(function() {
-        var Page = (function() {
-
-            var $navArrows = $( '#nav-arrows' ),
-                slitslider = $( '#slider' ).slitslider( {
-                    autoplay : true
-                } ),
-
-                init = function() {
-                    initEvents();
-                },
-                initEvents = function() {
-                    $navArrows.children( ':last' ).on( 'click', function() {
-                        slitslider.next();
-                        return false;
-                    });
-
-                    $navArrows.children( ':first' ).on( 'click', function() {
-                        slitslider.previous();
-                        return false;
-                    });
-                };
-
-            return { init : init };
-
-        })();
-
-        Page.init();
-    });
-
-
-    $(document).ready(function() {
-        $("#clock").countdown("2015/02/18 12:00:00", function(event) {
-            var $this = $(this).html(event.strftime(
-                '<li class="day-wrapper"><p>%D</p><p>ngày</p></li>'
-                    + '<li class="hour-wrapper"><p>%H</p><p>giờ</p></li>'
-                    + '<li class="minute-wrapper"><p>%M</p><p>phút</p></li>'
-                    + '<li class="second-wrapper"><p>%S</p><p>giây</p></li>'));
-        });
-    });
-
-    i = 0;
-    setInterval(function() {myBlink()}, 500);
-    function myBlink() {
-        if (i == 0) {
-            i = 1;
-            $(".gift-link>a").css("color", "#fff");
-        }
-        else {
-            i = 0;
-            $(".gift-link>a").css("color", "#ff7f00");
-        }
-    }
-
-</script>
-<!-- /SL Slider -->
 <?php wp_footer(); ?>
 </body>
 </html>
