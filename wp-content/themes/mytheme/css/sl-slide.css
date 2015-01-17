@@ -23,7 +23,8 @@
     float: left;
     margin: 0;
     padding: 0;
-    top: 0
+    top: 0;
+    position: relative
 }
 .slider-item>img {
     max-width: 100%;
@@ -49,4 +50,26 @@
 }
 .slider-right {
     right: 3%
+}
+.readmore-slider1 {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    width: 250px;
+    height: 60px;
+    background: url(../images/button-hover.png) 0 0 no-repeat
+}
+.readmore-slider1:hover {
+    background: url(../images/button.png) 0 0 no-repeat
+}
+.readmore-slider2 {
+    position: absolute;
+    bottom: 10%;
+    left: 6%;
+    width: 370px;
+    height: 60px;
+    background: url(../images/button2.png) 0 0 no-repeat
+}
+.readmore-slider2:hover {
+    background: url(../images/button2-hover.png) 0 0 no-repeat
 }

@@ -226,13 +226,13 @@
             <!--/Item 1-->
             <?php endwhile; endif; ?>
 
-            
+
         </ul>
     </div>
 
 </section>
 
-<section id="clients" class="main">
+<section style="display: none" id="clients" class="main">
     <div class="container">
         <div class="row-fluid">
             <div class="span2">

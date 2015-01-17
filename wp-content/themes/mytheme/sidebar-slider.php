@@ -3,11 +3,11 @@
     <div id="slider-content">
         <div class="slider-item">
             <img src="<?= bloginfo('template_directory') ?>/images/slider/1.jpg" alt="" />
-            <a style="display: none" href="#">Xem thêm</a>
+            <a class="readmore-slider1" style="" href="<?= home_url() ?>/?page_id=27"></a>
         </div>
         <div class="slider-item">
             <img src="<?= bloginfo('template_directory') ?>/images/slider/2.jpg" alt="" />
-            <a style="display: none" href="#">Xem thêm</a>
+            <a style=""class="readmore-slider2" href="<?= home_url() ?>/?page_id=5"></a>
         </div>
         <div class="slider-item">
             <img src="<?= bloginfo('template_directory') ?>/images/slider/3.jpg" alt="" />

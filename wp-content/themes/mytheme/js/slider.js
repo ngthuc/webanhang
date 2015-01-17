@@ -1,6 +1,6 @@
 $(document).ready(function() {
     animateTime = 1000;
-    delayTime = 3000;
+    delayTime = 6000;
     countSlider = $("#slider-content>.slider-item").length;
 
     $("#slider-content").css("width", 100*countSlider+"%");

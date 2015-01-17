@@ -1,7 +1,16 @@
-<?php get_header(); ?>
+<?php
+/*
+ * Template Name: Checkout Page
+ */
+?>
 
-	<h2>Error 404 - Page Not Found</h2>
+<?php get_header() ?>
+<?php include_once 'inc/breadcrumb.php'; ?>
 
-<?php get_sidebar(); ?>
+<section>
+    <div class="container">
+        <h1>Tiếc thật, hình như trang này không tồn tại hoặc đã bị xóa ...</h1>
+    </div>
+</section>
 
-<?php get_footer(); ?>
+<?php get_footer() ?>
