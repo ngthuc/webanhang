@@ -151,13 +151,13 @@
     </div>
     <!--Modal Body-->
     <div class="modal-body">
-        <form class="form-inline" action="" method="post" id="form-login">
-            <input type="text" id="username" name="username" class="input-small" placeholder="Username">
-            <input type="password" id="password" name="password" class="input-small" placeholder="Password">
+        <form class="form-inline" action="<?php echo home_url() ?>/wp-login.php" method="post" id="form-login">
+            <input type="text" id="username" name="log" class="input-small" placeholder="Username">
+            <input type="password" id="password" name="pwd" class="input-small" placeholder="Password">
             <label class="checkbox">
                 <input type="checkbox"> Remember me
             </label>
-            <button type="submit" name="login" class="btn btn-primary">Sign in</button>
+            <button type="submit" name="wp-submit" class="btn btn-primary">Sign in</button>
         </form>
         <a href="#">Forgot your password?</a>
     </div>
@@ -173,7 +173,7 @@
         <form class="form-inline" action="" method="post" id="form-login">
             <?php echo get_avatar($curr_user->ID); ?>
             <label>Tài khoản: <?php echo $curr_user->data->user_nicename ?></label>
-            <button type="submit" name="login" class="btn btn-primary">Sign out</button>
+            <a href="<?php echo wp_logout_url(home_url()); ?>" class="btn btn-primary">Sing out</a>
         </form>
         
     </div>
