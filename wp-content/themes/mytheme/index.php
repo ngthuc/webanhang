@@ -209,9 +209,11 @@
         <div class="gap"></div>
         <ul class="gallery col-4">
             <!--Item 1-->
+            <?php query_posts(array('showposts'=>4, 'post_type'=>'template')) ?>
+            <?php if(have_posts()): while(have_posts()): the_post(); ?>
             <li>
                 <div class="preview">
-                    <img alt="" src="<?= bloginfo('template_directory') ?>/images/portfolio/thumb/item1.jpg">
+                    <?php the_post_thumbnail(); ?>
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -219,83 +221,19 @@
                     </div>
                 </div>
                 <div class="desc">
-                    <h5>Lorem ipsum dolor sit amet</h5>
+                    <h5><?php echo get_the_excerpt(); ?></h5>
                 </div>
                 <div id="modal-1" class="modal hide fade">
                     <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
                     <div class="modal-body">
-                        <img src="<?= bloginfo('template_directory') ?>/images/portfolio/full/item1.jpg" alt=" " width="100%" style="max-height:400px">
+                        <img src="<?php echo get_post_meta(get_the_ID(), 'template-image', true); ?>" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>
             </li>
             <!--/Item 1-->
+            <?php endwhile; endif; ?>
 
-            <!--Item 2-->
-            <li>
-                <div class="preview">
-                    <img alt=" " src="<?= bloginfo('template_directory') ?>/images/portfolio/thumb/item2.jpg">
-                    <div class="overlay">
-                    </div>
-                    <div class="links">
-                        <a data-toggle="modal" href="#modal-1"><i class="icon-eye-open"></i></a><a href="#"><i class="icon-link"></i></a>
-                    </div>
-                </div>
-                <div class="desc">
-                    <h5>Lorem ipsum dolor sit amet</h5>
-                </div>
-                <div id="modal-1" class="modal hide fade">
-                    <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
-                    <div class="modal-body">
-                        <img src="<?= bloginfo('template_directory') ?>/images/portfolio/full/item2.jpg" alt=" " width="100%" style="max-height:400px">
-                    </div>
-                </div>
-            </li>
-            <!--/Item 2-->
-
-            <!--Item 3-->
-            <li>
-                <div class="preview">
-                    <img alt=" " src="<?= bloginfo('template_directory') ?>/images/portfolio/thumb/item3.jpg">
-                    <div class="overlay">
-                    </div>
-                    <div class="links">
-                        <a data-toggle="modal" href="#modal-3"><i class="icon-eye-open"></i></a><a href="#"><i class="icon-link"></i></a>
-                    </div>
-                </div>
-                <div class="desc">
-                    <h5>Lorem ipsum dolor sit amet</h5>
-                </div>
-                <div id="modal-3" class="modal hide fade">
-                    <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
-                    <div class="modal-body">
-                        <img src="<?= bloginfo('template_directory') ?>/images/portfolio/full/item3.jpg" alt=" " width="100%" style="max-height:400px">
-                    </div>
-                </div>
-            </li>
-            <!--/Item 3-->
-
-            <!--Item 4-->
-            <li>
-                <div class="preview">
-                    <img alt=" " src="<?= bloginfo('template_directory') ?>/images/portfolio/thumb/item4.jpg">
-                    <div class="overlay">
-                    </div>
-                    <div class="links">
-                        <a data-toggle="modal" href="#modal-4"><i class="icon-eye-open"></i></a><a href="#"><i class="icon-link"></i></a>
-                    </div>
-                </div>
-                <div class="desc">
-                    <h5>Lorem ipsum dolor sit amet</h5>
-                </div>
-                <div id="modal-4" class="modal hide fade">
-                    <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
-                    <div class="modal-body">
-                        <img src="<?= bloginfo('template_directory') ?>/images/portfolio/full/item4.jpg" alt=" " width="100%" style="max-height:400px">
-                    </div>
-                </div>
-            </li>
-            <!--/Item 4-->
-
+            
         </ul>
     </div>
 

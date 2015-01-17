@@ -10,7 +10,7 @@
                     <h2><?php the_title(); ?></h2>
                     <div class="blog-meta clearfix">
                         <p class="pull-left">
-                            <i class="icon-user"></i> by <a href="<?php the_author_link() ?>"><?php the_author(); ?></a> | <i class="icon-folder-close"></i> Category <a href="#"><?php the_category(' ') ?></a> | <i class="icon-calendar"></i> <?php the_date() ?>
+                            <i class="icon-user"></i> by <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a> | <i class="icon-folder-close"></i> Category <a href="#"><?php the_category(' ') ?></a> | <i class="icon-calendar"></i> <?php the_date() ?>
                         </p>
                         <p class="pull-right"><i class="icon-comment pull"></i> <?php echo get_comments_number() ?> Comments</p>
                     </div>
