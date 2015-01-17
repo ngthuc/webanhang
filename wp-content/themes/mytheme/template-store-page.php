@@ -15,7 +15,7 @@
 
 
     <ul class="gallery col-4">
-        <?php query_posts(array('post_type' => 'template', 'posts_per_page' => '4', 'paged' => get_query_var('paged') ? get_query_var('paged') : 1)); ?>
+        <?php query_posts(array('post_type' => 'template', 'posts_per_page' => 12, 'paged' => get_query_var('paged') ? get_query_var('paged') : 1)); ?>
         <?php if (have_posts()): while (have_posts()): the_post(); ?>
         <!--Item -->
         <li>
