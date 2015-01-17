@@ -129,7 +129,7 @@
         <div class="row-fluid">
             <div class="span7">
                 <div class="gap">
-                    <h3>CÁC DỊCH VỤ ĐI KÈM VỚI GIÁ CỰC KỲ ƯU ĐÃI</h3>
+                    <h3 class="">CÁC DỊCH VỤ ĐI KÈM VỚI GIÁ CỰC KỲ ƯU ĐÃI</h3>
                 </div>
                 <table class="table">
                     <tr>
@@ -163,10 +163,13 @@
                         <td><a href="<?= home_url() ?>/?page_id=25"><i class="icon-angle-right"></i> Xem chi tiết</a></td>
                     </tr>
                 </table>
+                <p class="no-margin" style="font-size: 13px">
+                    * Các dịch vụ đi kèm là tùy chọn. Tuy nhiên bạn nên đăng ký trọn gói để được hưởng những ưu đãi từ
+                    Iziweb, chỉ việc yên tâm bán hàng vì không phải lo lắng về những vấn đề kỹ thuật.
+                </p>
             </div>
             <div class="span5">
-                <div class="gap"></div>
-                <img src="<?= bloginfo('template_directory') ?>/images/demo-img.png">
+                <img src="<?= bloginfo('template_directory') ?>/images/demo-img.png" style="margin-top: 50px">
             </div>
         </div>
     </div>
@@ -177,17 +180,20 @@
 <section id="gift">
     <div class="container">
         <div class="row-fluid">
-            <div class="span8">
-                <div class="center">
-                    <h3 class="gift-title">VỚI IZIWEB, ĐĂNG KÝ CÓ WEBSITE NGAY, CHỈ VIỆC BÁN HÀNG</h3>
-                    <div class="big-sale">
-                        <h3><a href="#">KHUYẾN MẠI DUY NHẤT DỊP TẾT ẤT MÙI</a></h3>
-                    </div>
-                    <ul id="clock" class="clock unstyled">
-
-                    </ul>
-                    <p class="my-note">Giải pháp nhanh nhất, tốt nhất, rẻ nhất, dễ dàng nhất để tăng doanh số bán hàng nhanh chóng</p>
-                </div>
+            <div class="span7">
+                <h3 class="gift-title">IZIWEB, ĐĂNG KÝ CÓ NGAY WEBSITE</h3>
+                <p class="my-note gap">Giải pháp nhanh nhất, tốt nhất, rẻ nhất và dễ dàng nhất để tăng doanh số bán hàng nhanh chóng</p>
+                <ul id="clock" class="clock unstyled">
+                    <li class="day-wrapper">
+                        <p>22</p>
+                        <p>Ngày</p>
+                    </li>
+                    <li class="day-wrapper"><p>22</p><p>giờ</p></li>
+                    <li class="day-wrapper"><p>22</p><p>phút</p></li>
+                    <li class="day-wrapper"><p>22</p><p>giây</p></li>
+                    <div style="clear: both"></div>
+                </ul>
+                <h3 class="gift-link"><a href="#">KHUYẾN MẠI DUY NHẤT DỊP TẾT ẤT MÙI</a></h3>
             </div>
         </div>
     </div>
@@ -202,12 +208,10 @@
         </div>
         <div class="gap"></div>
         <ul class="gallery col-4">
-            <?php query_posts(array('showposts'=>4, 'post_type'=>'template')); ?>
-            <?php if(have_posts()): while(have_posts()): the_post(); ?>
             <!--Item 1-->
             <li>
                 <div class="preview">
-                    <?php the_post_thumbnail(); ?>
+                    <img alt="" src="<?= bloginfo('template_directory') ?>/images/portfolio/thumb/item1.jpg">
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -215,24 +219,81 @@
                     </div>
                 </div>
                 <div class="desc">
-                    <h5><?php echo get_the_excerpt(); ?></h5>
+                    <h5>Lorem ipsum dolor sit amet</h5>
                 </div>
                 <div id="modal-1" class="modal hide fade">
                     <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
                     <div class="modal-body">
-                        <img src="<?php echo get_post_meta(get_the_ID(), 'template-image', true) ?> ?>" alt=" " width="100%" style="max-height:400px">
+                        <img src="<?= bloginfo('template_directory') ?>/images/portfolio/full/item1.jpg" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>
             </li>
             <!--/Item 1-->
-            <?php endwhile; endif; ?>
 
             <!--Item 2-->
-            
+            <li>
+                <div class="preview">
+                    <img alt=" " src="<?= bloginfo('template_directory') ?>/images/portfolio/thumb/item2.jpg">
+                    <div class="overlay">
+                    </div>
+                    <div class="links">
+                        <a data-toggle="modal" href="#modal-1"><i class="icon-eye-open"></i></a><a href="#"><i class="icon-link"></i></a>
+                    </div>
+                </div>
+                <div class="desc">
+                    <h5>Lorem ipsum dolor sit amet</h5>
+                </div>
+                <div id="modal-1" class="modal hide fade">
+                    <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
+                    <div class="modal-body">
+                        <img src="<?= bloginfo('template_directory') ?>/images/portfolio/full/item2.jpg" alt=" " width="100%" style="max-height:400px">
+                    </div>
+                </div>
+            </li>
             <!--/Item 2-->
 
             <!--Item 3-->
-            
+            <li>
+                <div class="preview">
+                    <img alt=" " src="<?= bloginfo('template_directory') ?>/images/portfolio/thumb/item3.jpg">
+                    <div class="overlay">
+                    </div>
+                    <div class="links">
+                        <a data-toggle="modal" href="#modal-3"><i class="icon-eye-open"></i></a><a href="#"><i class="icon-link"></i></a>
+                    </div>
+                </div>
+                <div class="desc">
+                    <h5>Lorem ipsum dolor sit amet</h5>
+                </div>
+                <div id="modal-3" class="modal hide fade">
+                    <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
+                    <div class="modal-body">
+                        <img src="<?= bloginfo('template_directory') ?>/images/portfolio/full/item3.jpg" alt=" " width="100%" style="max-height:400px">
+                    </div>
+                </div>
+            </li>
+            <!--/Item 3-->
+
+            <!--Item 4-->
+            <li>
+                <div class="preview">
+                    <img alt=" " src="<?= bloginfo('template_directory') ?>/images/portfolio/thumb/item4.jpg">
+                    <div class="overlay">
+                    </div>
+                    <div class="links">
+                        <a data-toggle="modal" href="#modal-4"><i class="icon-eye-open"></i></a><a href="#"><i class="icon-link"></i></a>
+                    </div>
+                </div>
+                <div class="desc">
+                    <h5>Lorem ipsum dolor sit amet</h5>
+                </div>
+                <div id="modal-4" class="modal hide fade">
+                    <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
+                    <div class="modal-body">
+                        <img src="<?= bloginfo('template_directory') ?>/images/portfolio/full/item4.jpg" alt=" " width="100%" style="max-height:400px">
+                    </div>
+                </div>
+            </li>
             <!--/Item 4-->
 
         </ul>

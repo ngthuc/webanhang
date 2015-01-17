@@ -215,6 +215,19 @@
         });
     });
 
+    i = 0;
+    setInterval(function() {myBlink()}, 500);
+    function myBlink() {
+        if (i == 0) {
+            i = 1;
+            $(".gift-link>a").css("color", "#fff");
+        }
+        else {
+            i = 0;
+            $(".gift-link>a").css("color", "#ff7f00");
+        }
+    }
+
 </script>
 <!-- /SL Slider -->
 <?php wp_footer(); ?>
