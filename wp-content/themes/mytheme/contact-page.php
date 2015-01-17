@@ -7,6 +7,7 @@
 <?php get_header() ?>
 <?php include_once 'inc/breadcrumb.php'; ?>
 
+
 <section class="no-margin">
     <iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
     src=""></iframe>
@@ -19,22 +20,22 @@
             <h4>Gửi liên hệ cho chúng tôi</h4>
             <div class="status alert alert-success" style="display: none"></div>
 
-            <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
+            <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="">
                 <div class="row-fluid">
                     <div class="span5">
                         <label>Họ tên</label>
-                        <input type="text" class="input-block-level" required="required" placeholder="Họ tên">
+                        <input name="contact-name" type="text" class="input-block-level" required="required" placeholder="Họ tên">
                         <label>SĐT</label>
-                        <input type="text" class="input-block-level" required="required" placeholder="Số điện thoại">
+                        <input name="contact-phone" type="text" class="input-block-level" required="required" placeholder="Số điện thoại">
                         <label>Địa chỉ</label>
-                        <input type="text" class="input-block-level" required="required" placeholder="Địa chỉ">
+                        <input name="contact-address" type="text" class="input-block-level" required="required" placeholder="Địa chỉ">
                         <label>Email</label>
-                        <input type="text" class="input-block-level" required="required" placeholder="Email">
+                        <input name="contact-email" type="text" class="input-block-level" required="required" placeholder="Email">
                     </div>
                     <div class="span7">
                         <label>Nội dung liên hệ</label>
-                        <textarea name="message" id="message" required="required" class="input-block-level" rows="12"></textarea>
-                        <p style="margin-top: 40px"><button type="submit" class="btn btn-primary btn-large pull-right">Gửi</button></p>
+                        <textarea name="contact-content" id="message" required="required" class="input-block-level" rows="12"></textarea>
+                        <p style="margin-top: 40px"><input name="contact-submit" type="submit" class="btn btn-primary btn-large pull-right" value="Gửi" /></p>
                     </div>
                 </div>
                 <p></p>
