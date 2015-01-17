@@ -9,7 +9,7 @@
 
 <section id="checkout" class="container main">
     <form id="checkout-form" class="row-fluid">
-        <div class="span6 offset1">
+        <div class="span7">
             <div class="gap">
                 <h4>THÔNG TIN ĐƠN ĐẶT HÀNG</h4>
             </div>
@@ -18,17 +18,19 @@
                 <div class="span7">
                     Đã chọn giao diện mã số: <?php echo $_GET['tpl_id'] ?>
                 </div>
-                <div class="span4"><a href="<?php echo home_url() ?>/?page_id=5" title="Đổi giao diện"><i class="icon-pencil"></i> Đổi giao diện</a></div>
+                <div class="span3"><strong>Miễn phí</strong></div>
+                <div class="span1"><a href="<?php echo home_url() ?>/?page_id=5" title="Đổi giao diện"><i class="icon-pencil"></i></a></div>
             </div>
             <div class="row-fluid">
                 <div class="span1"><i class="icon-check"></i></div>
                 <div class="span7">Trọn bộ website bán hàng đầy đủ tính năng</div>
-                <div class="span4"><strong>500k / trọn đời</strong></div>
+                <div class="span3"><strong>500k / trọn đời</strong></div>
             </div>
             <div class="row-fluid">
                 <div class="span1"><i class="icon-check"></i></div>
                 <div class="span7">Hosting băng thông không giới hạn</div>
-                <div class="span4"><strong>50k / tháng</strong></div>
+                <div class="span3"><strong>30k / tháng</strong></div>
+                <div class="span1"><a href="" title="Xem bảng giá"><i class="icon-list"></i></a></div>
             </div>
             <div class="row-fluid">
                 <div class="span8 offset1">
@@ -42,18 +44,18 @@
             <div class="row-fluid">
                 <div class="span1"><i class="icon-check"></i></div>
                 <div class="span7">Tên miền quốc tế</div>
-                <div class="span4"><strong>20k / năm</strong></div>
+                <div class="span3"><strong>20k / năm</strong></div>
+                <div class="span1"><a href="#" title="Kiểm tra tên miền"><i class="icon-search"></i></a></div>
             </div>
             <div class="row-fluid">
                 <div class="span7 offset1">
-                    <input type="text" placeholder="Nhập tên miền">
+                    <input type="text" placeholder="Nhập tên miền mong muốn">
                 </div>
-                <div class="span4"><a href="#"><i class="icon-search"></i> Kiểm tra tên miền</a></div>
             </div>
             <div class="row-fluid">
                 <div class="span1"><i class="icon-check"></i></div>
                 <div class="span7">Các dịch vụ khác</div>
-                <div class="span4"><a href="#"><i class="icon-arrow-right"></i> Xem báo giá</a></div>
+                <div class="span3"><strong>Tùy yêu cầu</strong></div>
             </div>
             <div class="row-fluid">
                 <div class="span8 offset1">
@@ -66,17 +68,26 @@
             </div>
             <hr>
             <div class="row-fluid">
-                <div class="span6 offset1"><h3>Tổng cộng đơn hàng</h3></div>
-                <div class="span5"><h3>500k</h3></div>
+                <div class="span7 offset1"><h4>Tổng cộng đơn hàng</h4></div>
+                <div class="span3"><h4>500k</h4></div>
+                <div class="span1" style="font-weight: bold; color: red">*</div>
             </div>
             <hr>
-            <div class="row-fluid">
+            <div class="row-fluid gap">
                 <div class="span4 offset1">
                     <input class="btn btn-primary btn-large" type="submit" value="Gửi">
                 </div>
             </div>
+            <div class="row-fluid">
+                <div class="span11 offset1" style="font-size: 13px">
+                    <span style="color: red">*</span> Các dịch vụ đi kèm là tùy chọn. Mặc định chỉ với <strong>500k</strong> bạn đã có ngay một website bán hàng
+                    đầy đủ tính năng. Báo giá trên chưa bao gồm chi phí cho các dịch vụ Thiết kế đồ họa, Quản trị nội dung ... Nếu bạn
+                    đăng ký các dịch vụ này vui lòng ghi rõ yêu cầu ở form liên hệ bên cạnh. Mức giá tùy theo số lượng và yêu cầu của bạn.
+                    Iziweb cam kết chất lượng tốt và mức giá cực kỳ ưu đãi cho khách hàng.
+                </div>
+            </div>
         </div>
-        <div class="span4">
+        <div class="span5">
             <div class="gap">
                 <h4>THÔNG TIN KHÁCH HÀNG</h4>
             </div>
@@ -89,7 +100,7 @@
             <label>Email</label>
             <input type="text" class="input-block-level" required="required" placeholder="Email">
             <label>Nội dung</label>
-            <textarea rows="10" class="input-block-level" placeholder="Các thông tin hoặc yêu cầu khác"></textarea>
+            <textarea id="message" rows="10" class="input-block-level" placeholder="Các thông tin hoặc yêu cầu khác"></textarea>
         </div>
     </form>
 </section>

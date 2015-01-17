@@ -129,7 +129,7 @@
         <div class="row-fluid">
             <div class="span7">
                 <div class="gap">
-                    <h3>CÁC DỊCH VỤ ĐI KÈM VỚI GIÁ CỰC KỲ ƯU ĐÃI</h3>
+                    <h3 class="">CÁC DỊCH VỤ ĐI KÈM VỚI GIÁ CỰC KỲ ƯU ĐÃI</h3>
                 </div>
                 <table class="table">
                     <tr>
@@ -163,10 +163,13 @@
                         <td><a href="<?= home_url() ?>/?page_id=25"><i class="icon-angle-right"></i> Xem chi tiết</a></td>
                     </tr>
                 </table>
+                <p class="no-margin" style="font-size: 13px">
+                    * Các dịch vụ đi kèm là tùy chọn. Tuy nhiên bạn nên đăng ký trọn gói để được hưởng những ưu đãi từ
+                    Iziweb, chỉ việc yên tâm bán hàng vì không phải lo lắng về những vấn đề kỹ thuật.
+                </p>
             </div>
             <div class="span5">
-                <div class="gap"></div>
-                <img src="<?= bloginfo('template_directory') ?>/images/demo-img.png">
+                <img src="<?= bloginfo('template_directory') ?>/images/demo-img.png" style="margin-top: 50px">
             </div>
         </div>
     </div>
@@ -177,17 +180,20 @@
 <section id="gift">
     <div class="container">
         <div class="row-fluid">
-            <div class="span8">
-                <div class="center">
-                    <h3 class="gift-title">VỚI IZIWEB, ĐĂNG KÝ CÓ WEBSITE NGAY, CHỈ VIỆC BÁN HÀNG</h3>
-                    <div class="big-sale">
-                        <h3><a href="#">KHUYẾN MẠI DUY NHẤT DỊP TẾT ẤT MÙI</a></h3>
-                    </div>
-                    <ul id="clock" class="clock unstyled">
-
-                    </ul>
-                    <p class="my-note">Giải pháp nhanh nhất, tốt nhất, rẻ nhất, dễ dàng nhất để tăng doanh số bán hàng nhanh chóng</p>
-                </div>
+            <div class="span7">
+                <h3 class="gift-title">IZIWEB, ĐĂNG KÝ CÓ NGAY WEBSITE</h3>
+                <p class="my-note gap">Giải pháp nhanh nhất, tốt nhất, rẻ nhất và dễ dàng nhất để tăng doanh số bán hàng nhanh chóng</p>
+                <ul id="clock" class="clock unstyled">
+                    <li class="day-wrapper">
+                        <p>22</p>
+                        <p>Ngày</p>
+                    </li>
+                    <li class="day-wrapper"><p>22</p><p>giờ</p></li>
+                    <li class="day-wrapper"><p>22</p><p>phút</p></li>
+                    <li class="day-wrapper"><p>22</p><p>giây</p></li>
+                    <div style="clear: both"></div>
+                </ul>
+                <h3 class="gift-link"><a href="#">KHUYẾN MẠI DUY NHẤT DỊP TẾT ẤT MÙI</a></h3>
             </div>
         </div>
     </div>
