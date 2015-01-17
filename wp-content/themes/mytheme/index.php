@@ -186,7 +186,7 @@
                 <ul id="clock" class="clock unstyled">
 
                 </ul>
-                <h3 class="gift-link"><a href="#">KHUYẾN MẠI DUY NHẤT DỊP TẾT ẤT MÙI</a></h3>
+                <h3 class="gift-link"><a href="<?= home_url() ?>/?page_id=35">KHUYẾN MẠI DUY NHẤT DỊP TẾT ẤT MÙI</a></h3>
             </div>
         </div>
     </div>

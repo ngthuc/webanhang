@@ -71,7 +71,7 @@
                             <a href="http://allblueviet.com">http://allblueviet.com</a>.
                         </li>
                         <li>
-                            <i class="icon-shield"></i> "Giương buồm ra khơi tìm kiếm sự tự do và kho báu"
+                            <i class="icon-shield"></i> "Giương buồm ra biển khơi, tìm kiếm sự tự do và kho báu!"
                         </li>
                     </ul>
                 </div>
