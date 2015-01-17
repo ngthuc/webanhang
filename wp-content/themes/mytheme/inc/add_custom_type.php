@@ -1,4 +1,5 @@
 <?php
+
 // post type template
 
 function create_post_type_template() {
@@ -51,7 +52,20 @@ add_action('init', create_post_type_template());
 add_action('add_meta_boxes', 'add_template_image');
 
 function add_template_image() {
+    add_meta_box('template-price', 'Giá giao diện', 'set_template_price', 'template', 'normal', 'low', array());
     add_meta_box('template-image', 'Ảnh Demo', 'set_template_image', 'template', 'normal', 'low', array());
+}
+
+function set_template_price() {
+    global $post;
+    $custom = get_post_custom($post->ID);
+    $tpl_price = $custom['template-price'][0];
+    ?>
+<p>
+<label>Giá giao diện (VNĐ) : </label>
+<input type="text" name="template-price" value="<?php if(isset($tpl_price)) echo $tpl_price; ?>" />
+</p>
+    <?php
 }
 
 function set_template_image() {
@@ -66,11 +80,11 @@ function set_template_image() {
     <input type="hidden" name="template-image" id="imgurl" value="<?php if (isset($tpl_image)) echo $tpl_image; ?>" />
     <input onclick="upload_image('#imgurl')" type="submit" id="btn-upload" value="Upload Image" /> <br />
     <div id="template-image-box">
-        <?php if(isset($tpl_image)){ ?>
+        <?php if (isset($tpl_image)) { ?>
             <img id="show-tpl-imgurl" src="<?php echo $tpl_image; ?>" style="max-width: 810px; margin: 5px;" />
-        <?php }else{ ?>
+    <?php } else { ?>
             <img id="show-tpl-imgurl" src="<?php echo get_template_directory_uri() ?>/images/ico/icon.png" style="" />
-        <?php } ?>
+    <?php } ?>
     </div>
     <script>
         jQuery("#btn-upload").click(function () {
@@ -83,13 +97,13 @@ function set_template_image() {
                 imgurl = jQuery('img', html).attr('src');
                 jQuery(imgid).val(imgurl);
                 jQuery("#template-image-box").html(
-                    '<img id="show-tpl-imgurl" src="'+imgurl+'" style="max-width: 810px; margin: 5px;" />'
-                );
+                        '<img id="show-tpl-imgurl" src="' + imgurl + '" style="max-width: 810px; margin: 5px;" />'
+                        );
                 tb_remove();
             };
         }
     </script>
-<?php
+    <?php
 }
 
 add_action('save_post', 'update_tpl_image');
@@ -104,12 +118,17 @@ function update_tpl_image($post_id) {
     if (isset($_REQUEST['post_type']) && $_REQUEST['post_type'] == 'template') {
         if (!empty($_REQUEST['template-image'])) {
             update_post_meta($post_id, 'template-image', $_POST['template_image']);
+            update_post_meta($post_id, 'template-image', $_POST['template_price']);
         } else {
             delete_post_meta($post_id, 'template-image');
+            delete_post_meta($post_id, 'template-price');
         }
         //image
         if (isset($_POST['template-image'])) {
             update_post_meta($post_id, 'template-image', esc_url_raw($_POST['template-image']));
+        }
+        if (isset($_POST['template-price'])){
+            update_post_meta($post_id, 'template-price', ($_POST['template-price']));
         }
     }
 }
@@ -143,6 +162,7 @@ function create_post_type_contact() {
         'capability_type' => 'post'
     ));
 }
+
 add_action('init', create_post_type_contact());
 add_action('add_meta_boxes', 'add_my_contact_field');
 
@@ -182,18 +202,18 @@ function show_contact_box() {
     ?>
     <table>
         <?php foreach ($contact_fields as $box) { ?>
-            <?php
-            switch ($box['type']) {
-                case 'text':
-                    ?>
+        <?php
+        switch ($box['type']) {
+            case 'text':
+                ?>
                     <tr>
                         <td><label><?php echo $box['lable'] ?>: </label></td>
                         <td><input size="<?= $box['size'] ?>" type="text" name="<?php echo $box['name'] ?>" value="<?php if (isset($contacts)) echo $contacts[$box['name']][0] ?>" /></td>
                     </tr>
-                    <?php
-                    break;
-                case 'textarea':
-                    ?>
+                <?php
+                break;
+            case 'textarea':
+                ?>
                     <tr>
                         <td><label><?php echo $box['lable'] ?>: </label></td>
                         <td><textarea name="<?php echo $box['name'] ?>" rows="4" cols="80"  placeholder="content"><?php if (isset($contacts)) echo $contacts[$box['name']][0] ?></textarea></td>
@@ -205,7 +225,7 @@ function show_contact_box() {
             }
             ?>
 
-        <?php } ?>
+    <?php } ?>
     </table>
     <?php
 }
@@ -231,7 +251,7 @@ function update_my_contact($post_id) {
         delete_post_meta($post_id, 'contact-address');
         delete_post_meta($post_id, 'contact-email');
     }
-    if (isset($_POST['contact'])) {
+    if (isset($_POST['contact-submit'])) {
         update_post_meta($post_id, 'contact-name', $_POST['contact-name']);
         update_post_meta($post_id, 'contact-phone', $_POST['contact-phone']);
         update_post_meta($post_id, 'contact-address', $_POST['contact-address']);
@@ -241,7 +261,7 @@ function update_my_contact($post_id) {
 
 // add contact info from frontend
 if (isset($_POST['contact-submit'])) {
-   
+
     $order = array(
         'post_title' => 'contact_' . rand(100, 999),
         'post_excerpt' => $_POST['contact-content'],
@@ -303,4 +323,215 @@ function category_form_custom_field_save($term_id, $tt_id) {
     }
 }
 
+// create post type  order
+function create_post_type_my_order() {
+    register_post_type('my_order', array(
+        'labels' => array(
+            'name' => 'Đơn hàng',
+            'singular_name' => 'Đơn hàng',
+            'add_new' => 'Đơn hàng mới',
+            'edit_item' => 'Cập nhật Đơn hàng',
+            'all_items' => 'Tất cả đơn hàng',
+            'new_item_name' => 'Đơn hàng mới',
+            'view_item' => 'Xem đơn hàng',
+            'menu_name' => 'Đơn hàng',
+            'add_new_item' => 'Đơn hàng mới',
+        ),
+        'description' => 'Khách hàng đặt hàng template website',
+        'supports' => array(
+            'title', 'excerpt', 'revisions',
+        ),
+        'taxonomies' => array(''),
+        'hierarchical' => false,
+        'has_archive' => false,
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'show_in_nav_menus' => false,
+        'show_in_admin_bar' => false,
+        'menu_position' => 5,
+        'menu_icon' => 'dashicons-cart',
+        'capability_type' => 'post',
+    ));
+}
+
+add_action('init', 'create_post_type_my_order');
+
+add_action('add_meta_boxes', 'add_my_order_field');
+
+function add_my_order_field() {
+    add_meta_box('order-box', 'Order Information', 'show_order_box', 'my_order', 'normal', 'low', array());
+    add_meta_box('order-product', 'Order Product', 'show_order_product', 'my_order', 'normal', 'low', array());
+}
+
+function show_order_box() {
+    $order_fields = array(
+        array(
+            'type' => 'text',
+            'name' => 'order-product-id',
+            'lable' => 'Mã giao diện',
+            'size' => '60'
+        ),
+        array(
+            'type' => 'text',
+            'name' => 'order-name',
+            'lable' => 'Tên khách hàng',
+            'size' => 60
+        ),
+        array(
+            'type' => 'text',
+            'name' => 'order-date',
+            'lable' => 'Thời gian',
+            'size' => '60'
+        ),
+        array(
+            'type' => 'text',
+            'name' => 'order-email',
+            'lable' => 'Email đặt hàng',
+            'size' => '60'
+        ),
+        array(
+            'type' => 'text',
+            'name' => 'order-phone',
+            'lable' => 'Điện thoại',
+            'size' => '60'
+        ),
+        array(
+            'type' => 'select',
+            'name' => 'order-status',
+            'lable' => 'Trạng thái',
+            'size' => '60'
+        ),
+        array(
+            'type' => 'text',
+            'name' => 'order-address',
+            'lable' => 'Địa chỉ',
+            'size' => '60'
+        ),
+    );
+    global $post;
+    $orders = get_post_custom($post->ID);
+    ?>
+    <table>
+        <?php foreach ($order_fields as $box) { ?>
+            <?php
+            switch ($box['type']) {
+                case 'text':
+                    ?>
+                    <tr>
+                        <td><label><?php echo $box['lable'] ?>: </label></td>
+                        <td><input type="text" name="<?php echo $box['name'] ?>" value="<?php if (isset($orders)) echo $orders[$box['name']][0] ?>" /></td>
+                    </tr>
+                    <?php
+                    break;
+                case 'textarea':
+                    ?>
+                    <tr>
+                        <td><label><?php echo $box['lable'] ?>: </label></td>
+                        <td><textarea name="<?php echo $box['name'] ?>"  placeholder="date"><?php if (isset($orders)) echo $orders[$box['name']][0] ?></textarea></td>
+                    </tr>
+                    <?php
+                    break;
+                case 'select':
+                    ?>
+                    <td><label><?php echo $box['lable'] ?>: </label></td>
+                    <td><select name="<?php echo $box['name'] ?>">
+                            <option value="pendding">Pendding</option>
+                            <option value="complete">Complele</option>
+                        </select></td>
+                <?php
+                default:
+                    break;
+            }
+            ?>
+
+    <?php } ?>
+    </table>
+    <?php
+}
+
+function show_order_product() {
+    $orders = get_post_custom($post->ID);
+    $product_id_code = explode("-", $orders['order-product-id'][0]);
+    $product = get_post($product_id_code[1]);
+    ?>
+    <table style="width: 100%;">
+        <tr>
+            <td><input type="checkbox" /></td>
+            <td>Image</td>
+            <td>Name</td>
+            <td>Quantity</td>
+            <td>Total</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" /></td>
+            <td><?php echo get_the_post_thumbnail($product->ID, array(70, 70)) ?></td>
+            <td><?= $product->post_title; ?></td>
+            <td>1</td>
+            <td>1000000</td>
+        </tr>
+    </table>
+    <?php
+}
+
+add_action('save_post', 'update_order_date');
+
+function update_order_date($post_id) {
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+        return;
+    }
+    if (!current_user_can('edit_post', $post_id)) {
+        return;
+    }
+    if (isset($_REQUEST['post_type']) && $_REQUEST['post_type'] == 'my_order') {
+        update_post_meta($post_id, 'order-date', $_POST['order-date']);
+        update_post_meta($post_id, 'order-name', $_POST['order-name']);
+        update_post_meta($post_id, 'order-email', $_POST['order-email']);
+        update_post_meta($post_id, 'order-phone', $_POST['order-phone']);
+        update_post_meta($post_id, 'order-status', $_POST['order-status']);
+        update_post_meta($post_id, 'order-product-id', $_POST['order-product-id']);
+        update_post_meta($post_id, 'order-address', $_POST['order-address']);
+    } else {
+        delete_post_meta($post_id, 'order-date');
+        delete_post_meta($post_id, 'order-name');
+        delete_post_meta($post_id, 'order-email');
+        delete_post_meta($post_id, 'order-phone');
+        delete_post_meta($post_id, 'order-status');
+        delete_post_meta($post_id, 'order-product-id');
+        delete_post_meta($post_id, 'order-address');
+    }
+    if (isset($_POST['order-date'])) {
+        update_post_meta($post_id, 'order-date', $_POST['order-date']);
+        update_post_meta($post_id, 'order-name', $_POST['order-name']);
+        update_post_meta($post_id, 'order-email', $_POST['order-email']);
+        update_post_meta($post_id, 'order-phone', $_POST['order-phone']);
+        update_post_meta($post_id, 'order-status', $_POST['order-status']);
+        update_post_meta($post_id, 'order-product-id', $_POST['order-product-id']);
+        update_post_meta($post_id, 'order-address', $_POST['order-address']);
+    }
+}
+
+//insert from front end
+if (isset($_POST['order-submit'])) {
+    $order = array(
+        'post_title' => 'order_' . rand(100, 999),
+        'post_excerpt' => $_POST['order-content'],
+        'post_status' => 'publish',
+        'post_type' => 'my_order',
+    );
+
+    $post_id = wp_insert_post($order);
+    var_dump($post_id);
+    add_post_meta($post_id, 'order-date', date('m/d/Y h:i:s a', time()), true);
+    add_post_meta($post_id, 'order-email', $_POST['order-email'], true);
+    add_post_meta($post_id, 'order-name', $_POST['order-name'], true);
+    add_post_meta($post_id, 'order-phone', $_POST['order-phone'], true);
+    add_post_meta($post_id, 'order-product-id', $_POST['order-product-id'], true);
+    add_post_meta($post_id, 'order-address', $_POST['order-address'], true);
+//        require_once (ABSPATH.'wp-admin/includes/admin.php');
+//        $thumb_id = media_handle_upload('thumbnail', $post_id);
+//        add_post_meta($post_id, '_thumbnail_id', $thumb_id, true);
+    wp_redirect(home_url());
+    die();
+}
 

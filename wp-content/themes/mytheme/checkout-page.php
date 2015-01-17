@@ -8,7 +8,7 @@
 <?php include_once 'inc/breadcrumb.php'; ?>
 
 <section id="checkout" class="container main">
-    <form id="checkout-form" class="row-fluid">
+    <form id="checkout-form" method="post" action="" class="row-fluid">
         <div class="span7">
             <div class="gap">
                 <h4>THÔNG TIN ĐƠN ĐẶT HÀNG</h4>
@@ -16,7 +16,9 @@
             <div class="row-fluid">
                 <div class="span1"><i class="icon-check"></i></div>
                 <div class="span7">
-                    Đã chọn giao diện mã số: <?php echo $_GET['tpl_id'] ?>
+                    <?php if(isset($_GET['tpl_id'])) $tpl_id = $_GET['tpl_id']; else $tpl_id=""; ?>
+                    Đã chọn giao diện mã số: <?php echo $tpl_id; ?>
+                    <input type="hidden" name="order-product-id" value="<?php echo $tpl_id ?>" />
                 </div>
                 <div class="span3"><strong>Miễn phí</strong></div>
                 <div class="span1"><a href="<?php echo home_url() ?>/?page_id=5" title="Đổi giao diện"><i class="icon-pencil"></i></a></div>
@@ -75,7 +77,7 @@
             <hr>
             <div class="row-fluid gap">
                 <div class="span4 offset1">
-                    <input class="btn btn-primary btn-large" type="submit" value="Gửi">
+                    <input name="order-submit" class="btn btn-primary btn-large" type="submit" value="Gửi">
                 </div>
             </div>
             <div class="row-fluid">
@@ -92,15 +94,15 @@
                 <h4>THÔNG TIN KHÁCH HÀNG</h4>
             </div>
             <label>Họ tên</label>
-            <input type="text" class="input-block-level" required="required" placeholder="Họ tên">
+            <input name="order-name" type="text" class="input-block-level" required="required" placeholder="Họ tên">
             <label>Số điện thoại</label>
-            <input type="text" class="input-block-level" required="required" placeholder="Số điện thoại">
+            <input name="order-phone" type="text" class="input-block-level" required="required" placeholder="Số điện thoại">
             <label>Địa chỉ</label>
-            <input type="text" class="input-block-level" required="required" placeholder="Địa chỉ">
+            <input name="order-address" type="text" class="input-block-level" required="required" placeholder="Địa chỉ">
             <label>Email</label>
-            <input type="text" class="input-block-level" required="required" placeholder="Email">
+            <input name="order-email" type="text" class="input-block-level" required="required" placeholder="Email">
             <label>Nội dung</label>
-            <textarea id="message" rows="10" class="input-block-level" placeholder="Các thông tin hoặc yêu cầu khác"></textarea>
+            <textarea name="order-content" id="message" rows="10" class="input-block-level" placeholder="Các thông tin hoặc yêu cầu khác"></textarea>
         </div>
     </form>
 </section>
