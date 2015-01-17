@@ -184,14 +184,7 @@
                 <h3 class="gift-title">IZIWEB, ĐĂNG KÝ CÓ NGAY WEBSITE</h3>
                 <p class="my-note gap">Giải pháp nhanh nhất, tốt nhất, rẻ nhất và dễ dàng nhất để tăng doanh số bán hàng nhanh chóng</p>
                 <ul id="clock" class="clock unstyled">
-                    <li class="day-wrapper">
-                        <p>22</p>
-                        <p>Ngày</p>
-                    </li>
-                    <li class="day-wrapper"><p>22</p><p>giờ</p></li>
-                    <li class="day-wrapper"><p>22</p><p>phút</p></li>
-                    <li class="day-wrapper"><p>22</p><p>giây</p></li>
-                    <div style="clear: both"></div>
+
                 </ul>
                 <h3 class="gift-link"><a href="#">KHUYẾN MẠI DUY NHẤT DỊP TẾT ẤT MÙI</a></h3>
             </div>

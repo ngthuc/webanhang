@@ -170,10 +170,10 @@
     </div>
     <!--Modal Body-->
     <div class="modal-body">
-        <form class="form-inline" action="" method="post" id="form-login">
+        <form class="form-inline" action="" method="post" id="form-login" style="position: relative">
             <?php echo get_avatar($curr_user->ID); ?>
             <label>Tài khoản: <?php echo $curr_user->data->user_nicename ?></label>
-            <a href="<?php echo wp_logout_url(home_url()); ?>" class="btn btn-primary">Sing out</a>
+            <a style="position: absolute;top:0;right:0" href="<?php echo wp_logout_url(home_url()); ?>" class="btn btn-primary">Log out</a>
         </form>
         
     </div>
@@ -189,6 +189,19 @@
 <script src="<?= bloginfo('template_directory') ?>/js/jquery.countdown.js"></script>
 <script src="<?= bloginfo('template_directory') ?>/js/slider.js"></script>
 <!-- /Required javascript files for Slider -->
+
+<!--- count down --->
+<script>
+    $(document).ready(function() {
+        $("#clock").countdown("2015/02/18 12:00:00", function(event) {
+            var $this = $(this).html(event.strftime(
+                '<li class="day-wrapper"><p>%D</p><p>Ngày</p></li>'
+                    + '<li class="hour-wrapper"><p>%H</p><p>Giờ</p></li>'
+                    + '<li class="minute-wrapper"><p>%M</p><p>Phút</p></li>'
+                    + '<li class="second-wrapper"><p>%S</p><p>Giây</p></li>'));
+        });
+    });
+</script>
 
 <?php wp_footer(); ?>
 </body>

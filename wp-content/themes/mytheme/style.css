@@ -977,9 +977,6 @@ ul.faq li > div h3 {
 .gift-title {
     font-size: 22px;
 }
-.gift-link>a:hover {
-    text-decoration: underline;
-}
 .clock>li {
     height: 150px;
     display: inline-block;
