@@ -265,7 +265,7 @@ if (isset($_POST['contact-submit'])) {
     $order = array(
         'post_title' => 'contact_' . rand(100, 999),
         'post_excerpt' => $_POST['contact-content'],
-        'post_status' => 'publish',
+        'post_status' => 'pending',
         'post_type' => 'contact',
     );
 
@@ -436,7 +436,7 @@ function show_order_box() {
                     ?>
                     <td><label><?php echo $box['lable'] ?>: </label></td>
                     <td><select name="<?php echo $box['name'] ?>">
-                            <option value="pendding">Pendding</option>
+                            <option value="pending">Pendding</option>
                             <option value="complete">Complele</option>
                         </select></td>
                 <?php
@@ -516,7 +516,7 @@ if (isset($_POST['order-submit'])) {
     $order = array(
         'post_title' => 'order_' . rand(100, 999),
         'post_excerpt' => $_POST['order-content'],
-        'post_status' => 'publish',
+        'post_status' => 'pending',
         'post_type' => 'my_order',
     );
 
