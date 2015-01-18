@@ -209,7 +209,7 @@
         <div class="gap"></div>
         <ul class="gallery col-4">
             <!--Item 1-->
-            <?php query_posts(array('showposts'=>4, 'post_type'=>'template')) ?>
+            <?php query_posts(array('showposts'=>12, 'post_type'=>'project')) ?>
             <?php if(have_posts()): while(have_posts()): the_post(); ?>
             <li>
                 <div class="preview">
@@ -221,12 +221,12 @@
                     </div>
                 </div>
                 <div class="desc">
-                    <h5><?php echo get_the_excerpt(); ?></h5>
+                    <h5><?php the_title(); ?></h5>
                 </div>
                 <div id="modal-1" class="modal hide fade">
                     <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
                     <div class="modal-body">
-                        <img src="<?php echo get_post_meta(get_the_ID(), 'template-image', true); ?>" alt=" " width="100%" style="max-height:400px">
+                        <img src="<?php echo get_post_meta(get_the_ID(), 'project-image', true); ?>" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>
             </li>

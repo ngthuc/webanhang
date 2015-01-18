@@ -17,7 +17,7 @@ function create_post_type_template() {
         ),
         'description' => 'Kho giao diện',
         'supports' => array(
-            'title', 'excerpt', 'thumbnail', 'revisions',
+            'title', 'thumbnail', 'revisions',
         ),
         'taxonomies' => array('category'),
         'hierarchical' => true,
@@ -52,20 +52,7 @@ add_action('init', create_post_type_template());
 add_action('add_meta_boxes', 'add_template_image');
 
 function add_template_image() {
-    add_meta_box('template-price', 'Giá giao diện', 'set_template_price', 'template', 'normal', 'low', array());
     add_meta_box('template-image', 'Ảnh Demo', 'set_template_image', 'template', 'normal', 'low', array());
-}
-
-function set_template_price() {
-    global $post;
-    $custom = get_post_custom($post->ID);
-    $tpl_price = $custom['template-price'][0];
-    ?>
-<p>
-<label>Giá giao diện (VNĐ) : </label>
-<input type="text" name="template-price" value="<?php if(isset($tpl_price)) echo $tpl_price; ?>" />
-</p>
-    <?php
 }
 
 function set_template_image() {
@@ -80,11 +67,15 @@ function set_template_image() {
     <input type="hidden" name="template-image" id="imgurl" value="<?php if (isset($tpl_image)) echo $tpl_image; ?>" />
     <input onclick="upload_image('#imgurl')" type="submit" id="btn-upload" value="Upload Image" /> <br />
     <div id="template-image-box">
-        <?php if (isset($tpl_image)) { ?>
-            <img id="show-tpl-imgurl" src="<?php echo $tpl_image; ?>" style="max-width: 810px; margin: 5px;" />
-    <?php } else { ?>
-            <img id="show-tpl-imgurl" src="<?php echo get_template_directory_uri() ?>/images/ico/icon.png" style="" />
-    <?php } ?>
+        <?php
+        if (isset($tpl_image)) {
+            $image = $tpl_image;
+        } else {
+            $image = get_template_directory_uri() . '/images/ico/icon.png';
+        }
+        ?>
+        <img id="show-tpl-imgurl" src="<?php echo $image; ?>" style="max-width: 810px; margin: 5px;" />
+
     </div>
     <script>
         jQuery("#btn-upload").click(function () {
@@ -96,9 +87,7 @@ function set_template_image() {
             window.send_to_editor = function (html) {
                 imgurl = jQuery('img', html).attr('src');
                 jQuery(imgid).val(imgurl);
-                jQuery("#template-image-box").html(
-                        '<img id="show-tpl-imgurl" src="' + imgurl + '" style="max-width: 810px; margin: 5px;" />'
-                        );
+                jQuery('#show-tpl-imgurl').attr('src', imgurl);
                 tb_remove();
             };
         }
@@ -118,17 +107,12 @@ function update_tpl_image($post_id) {
     if (isset($_REQUEST['post_type']) && $_REQUEST['post_type'] == 'template') {
         if (!empty($_REQUEST['template-image'])) {
             update_post_meta($post_id, 'template-image', $_POST['template_image']);
-            update_post_meta($post_id, 'template-image', $_POST['template_price']);
         } else {
             delete_post_meta($post_id, 'template-image');
-            delete_post_meta($post_id, 'template-price');
         }
         //image
         if (isset($_POST['template-image'])) {
             update_post_meta($post_id, 'template-image', esc_url_raw($_POST['template-image']));
-        }
-        if (isset($_POST['template-price'])){
-            update_post_meta($post_id, 'template-price', ($_POST['template-price']));
         }
     }
 }
@@ -202,18 +186,18 @@ function show_contact_box() {
     ?>
     <table>
         <?php foreach ($contact_fields as $box) { ?>
-        <?php
-        switch ($box['type']) {
-            case 'text':
-                ?>
+            <?php
+            switch ($box['type']) {
+                case 'text':
+                    ?>
                     <tr>
                         <td><label><?php echo $box['lable'] ?>: </label></td>
                         <td><input size="<?= $box['size'] ?>" type="text" name="<?php echo $box['name'] ?>" value="<?php if (isset($contacts)) echo $contacts[$box['name']][0] ?>" /></td>
                     </tr>
-                <?php
-                break;
-            case 'textarea':
-                ?>
+                    <?php
+                    break;
+                case 'textarea':
+                    ?>
                     <tr>
                         <td><label><?php echo $box['lable'] ?>: </label></td>
                         <td><textarea name="<?php echo $box['name'] ?>" rows="4" cols="80"  placeholder="content"><?php if (isset($contacts)) echo $contacts[$box['name']][0] ?></textarea></td>
@@ -535,3 +519,105 @@ if (isset($_POST['order-submit'])) {
     die();
 }
 
+
+//custom post Project
+function create_post_type_project() {
+    register_post_type('project', array(
+        'labels' => array(
+            'name' => 'Dự án',
+            'singular_name' => 'Dự án',
+            'add_new' => 'Dự án mới',
+            'edit_item' => 'Chỉnh sửa Dự án',
+            'all_items' => 'Tất cả Dự án',
+            'new_item_name' => 'Dự án mới',
+            'view_item' => 'Xem Dự án',
+            'menu_name' => 'Dự án',
+            'add_new_item' => 'Thêm Dự án',
+        ),
+        'description' => 'Dự án đã thực hiện',
+        'supports' => array(
+            'title', 'thumbnail', 'revisions',
+        ),
+        'taxonomies' => array('category'),
+        'hierarchical' => false,
+        'has_archive' => false,
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'show_in_nav_menus' => false,
+        'show_in_admin_bar' => false,
+        'menu_position' => 7,
+        'menu_icon' => 'dashicons-portfolio',
+        'capability_type' => 'post'
+    ));
+}
+
+add_action('init', create_post_type_project());
+//field image
+add_action('add_meta_boxes', 'add_project_image');
+
+function add_project_image() {
+    add_meta_box('project-image', 'Ảnh Demo', 'set_project_image', 'project', 'normal', 'low', array());
+}
+
+function set_project_image() {
+    global $post;
+    $custom = get_post_custom($post->ID);
+    $tpl_image = $custom['project-image'][0];
+    add_thickbox();
+    ?>
+
+    <label>Ảnh Demo giao diện</label>
+
+    <input type="hidden" name="project-image" id="imgurl" value="<?php if (isset($tpl_image)) echo $tpl_image; ?>" />
+    <input onclick="upload_image('#imgurl')" type="submit" id="btn-upload" value="Upload Image" /> <br />
+    <div id="template-image-box">
+        <?php
+        if (isset($tpl_image)) {
+            $image = $tpl_image;
+        } else {
+            $image = get_template_directory_uri() . '/images/ico/icon.png';
+        }
+        ?>
+        <img id="show-proj-imgurl" src="<?php echo $image; ?>" style="max-width: 810px; margin: 5px;" />
+
+    </div>
+    <script>
+        jQuery("#btn-upload").click(function () {
+            return false;
+        });
+        function upload_image(imgid) {
+            tb_show('', 'media-upload.php?type=image&height=550&width=1000&TB_iframe=true');
+
+            window.send_to_editor = function (html) {
+                imgurl = jQuery('img', html).attr('src');
+                jQuery(imgid).val(imgurl);
+                jQuery('#show-proj-imgurl').attr('src', imgurl);
+                tb_remove();
+            };
+        }
+    </script>
+    <?php
+}
+
+add_action('save_post', 'update_proj_image');
+
+function update_proj_image($post_id) {
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+        return;
+    }
+    if (!current_user_can('edit_post', $post_id)) {
+        return;
+    }
+    if (isset($_REQUEST['post_type']) && $_REQUEST['post_type'] == 'project') {
+        if (!empty($_REQUEST['project-image'])) {
+            update_post_meta($post_id, 'project-image', $_POST['project-image']);
+        } else {
+            delete_post_meta($post_id, 'project-image');
+        }
+        //image
+        if (isset($_POST['project-image'])) {
+            update_post_meta($post_id, 'project-image', esc_url_raw($_POST['project-image']));
+        }
+    }
+}

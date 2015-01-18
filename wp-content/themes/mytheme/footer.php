@@ -144,39 +144,39 @@
 <!--  Login form -->
 
 <div class="modal hide fade in" id="loginForm" aria-hidden="false">
-    <?php if(!is_user_logged_in()){ ?>
-    <div class="modal-header">
-        <i class="icon-remove" data-dismiss="modal" aria-hidden="true"></i>
-        <h4>Login Form</h4>
-    </div>
-    <!--Modal Body-->
-    <div class="modal-body">
-        <form class="form-inline" action="<?php echo home_url() ?>/wp-login.php" method="post" id="form-login">
-            <input type="text" id="username" name="log" class="input-small" placeholder="Username">
-            <input type="password" id="password" name="pwd" class="input-small" placeholder="Password">
-            <label class="checkbox">
-                <input type="checkbox"> Remember me
-            </label>
-            <button type="submit" name="wp-submit" class="btn btn-primary">Sign in</button>
-        </form>
-        <a href="#">Forgot your password?</a>
-    </div>
-    <?php }else{ ?>
-    <?php $curr_user = wp_get_current_user(); //echo '<pre>';print_r($curr_user->data->user_nicename); echo '</pre>'; ?>
-    <!--/Modal Body-->
-    <div class="modal-header">
-        <i class="icon-remove" data-dismiss="modal" aria-hidden="true"></i>
-        <h4>Profile User</h4>
-    </div>
-    <!--Modal Body-->
-    <div class="modal-body">
-        <form class="form-inline" action="" method="post" id="form-login">
-            <?php echo get_avatar($curr_user->ID); ?>
-            <label>Tài khoản: <?php echo $curr_user->data->user_nicename ?></label>
-            <a href="<?php echo wp_logout_url(home_url()); ?>" class="btn btn-primary">Sing out</a>
-        </form>
-        
-    </div>
+    <?php if (!is_user_logged_in()) { ?>
+        <div class="modal-header">
+            <i class="icon-remove" data-dismiss="modal" aria-hidden="true"></i>
+            <h4>Login Form</h4>
+        </div>
+        <!--Modal Body-->
+        <div class="modal-body">
+            <form class="form-inline" action="<?php echo home_url() ?>/wp-login.php" method="post" id="form-login">
+                <input type="text" id="username" name="log" class="input-small" placeholder="Username">
+                <input type="password" id="password" name="pwd" class="input-small" placeholder="Password">
+                <label class="checkbox">
+                    <input type="checkbox"> Remember me
+                </label>
+                <button type="submit" name="wp-submit" class="btn btn-primary">Sign in</button>
+            </form>
+            <a href="#">Forgot your password?</a>
+        </div>
+    <?php } else { ?>
+        <?php $curr_user = wp_get_current_user(); //echo '<pre>';print_r($curr_user->data->user_nicename); echo '</pre>'; ?>
+        <!--/Modal Body-->
+        <div class="modal-header">
+            <i class="icon-remove" data-dismiss="modal" aria-hidden="true"></i>
+            <h4>Profile User</h4>
+        </div>
+        <!--Modal Body-->
+        <div class="modal-body">
+            <form class="form-inline" action="" method="post" id="form-login">
+                <?php echo get_avatar($curr_user->ID); ?>
+                <label>Tài khoản: <?php echo $curr_user->data->user_nicename ?></label>
+                <a href="<?php echo wp_logout_url(home_url()); ?>" class="btn btn-primary">Sing out</a>
+            </form>
+
+        </div>
     <?php } ?>
 </div>
 <!--  /Login form -->
@@ -192,30 +192,29 @@
 
 <!-- SL Slider -->
 <script type="text/javascript">
-    $(function() {
-        var Page = (function() {
+    $(function () {
+        var Page = (function () {
 
-            var $navArrows = $( '#nav-arrows' ),
-                slitslider = $( '#slider' ).slitslider( {
-                    autoplay : true
-                } ),
+            var $navArrows = $('#nav-arrows'),
+                    slitslider = $('#slider').slitslider({
+                autoplay: true
+            }),
+                    init = function () {
+                        initEvents();
+                    },
+                    initEvents = function () {
+                        $navArrows.children(':last').on('click', function () {
+                            slitslider.next();
+                            return false;
+                        });
 
-                init = function() {
-                    initEvents();
-                },
-                initEvents = function() {
-                    $navArrows.children( ':last' ).on( 'click', function() {
-                        slitslider.next();
-                        return false;
-                    });
+                        $navArrows.children(':first').on('click', function () {
+                            slitslider.previous();
+                            return false;
+                        });
+                    };
 
-                    $navArrows.children( ':first' ).on( 'click', function() {
-                        slitslider.previous();
-                        return false;
-                    });
-                };
-
-            return { init : init };
+            return {init: init};
 
         })();
 
@@ -223,10 +222,10 @@
     });
 
 
-    $(document).ready(function() {
-        $("#clock").countdown("2015/02/18 12:00:00", function(event) {
+    $(document).ready(function () {
+        $("#clock").countdown("2015/02/18 12:00:00", function (event) {
             var $this = $(this).html(event.strftime(
-                '<li class="day-wrapper"><p>%D</p><p>ngày</p></li>'
+                    '<li class="day-wrapper"><p>%D</p><p>ngày</p></li>'
                     + '<li class="hour-wrapper"><p>%H</p><p>giờ</p></li>'
                     + '<li class="minute-wrapper"><p>%M</p><p>phút</p></li>'
                     + '<li class="second-wrapper"><p>%S</p><p>giây</p></li>'));
@@ -234,7 +233,9 @@
     });
 
     i = 0;
-    setInterval(function() {myBlink()}, 500);
+    setInterval(function () {
+        myBlink()
+    }, 500);
     function myBlink() {
         if (i == 0) {
             i = 1;
@@ -246,6 +247,18 @@
         }
     }
 
+</script>
+<script>
+    $(document).ready(function () {
+        var location = window.location + '';
+//        location.substr(location.lastIndexOf('/')+1);
+
+        $('#main-menu ul li').removeClass('active');
+        $('#main-menu ul li a[href="' + window.location + '"]').parent("li").addClass('active');
+        if (location === 'http://iziweb.vn/') {
+            $('#main-menu ul li:first').addClass('active');
+        }
+    });
 </script>
 <!-- /SL Slider -->
 <?php wp_footer(); ?>
