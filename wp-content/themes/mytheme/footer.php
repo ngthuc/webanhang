@@ -171,6 +171,17 @@
 <script src="<?= bloginfo('template_directory') ?>/js/slider.js"></script>
 <!-- /Required javascript files for Slider -->
 
+<script>
+    $(document).ready(function () {
+        var location = window.location + '';
+        alert(location);
+        $('#main-menu ul li').removeClass('active');
+        $('#main-menu ul li a[href="' + window.location + '"]').parent("li").addClass('active');
+        if (location === 'http://iziweb.vn/') {
+            $('#main-menu ul li:first').addClass('active');
+        }
+    });
+</script>
 <!-- SL Slider -->
 <script type="text/javascript">
     $(function () {
@@ -228,18 +239,6 @@
         }
     }
 
-</script>
-<script>
-    $(document).ready(function () {
-        var location = window.location + '';
-//        location.substr(location.lastIndexOf('/')+1);
-
-        $('#main-menu ul li').removeClass('active');
-        $('#main-menu ul li a[href="' + window.location + '"]').parent("li").addClass('active');
-        if (location === 'http://iziweb.vn/') {
-            $('#main-menu ul li:first').addClass('active');
-        }
-    });
 </script>
 <!-- /SL Slider -->
 <?php wp_footer(); ?>
