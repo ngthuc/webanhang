@@ -45,8 +45,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
     box-sizing: border-box
 }
 
+html { font-size: 62.5%; }
+
 body {
     font-size: 14px;
+    font-size: 1.4em;
     color: #34495e;
     background: #fafafa;
     font-family: Tahoma, sans-serif;
@@ -68,7 +71,7 @@ body h3, body h4 {
 .btn {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
-    border-radius: 10px;
+    border-radius: 1px;
     border: 0;
     background-image: none;
     text-shadow: none;
@@ -438,20 +441,20 @@ header .dropdown-menu:before {
     margin-right: 10px
 }
 
-#portfolio .modal {
+#portfolio .modal, #recent-works .modal {
     position: absolute;
     width: 100%;
     margin-left: 0;
     left: 0;
     border-radius: 0;
 }
-#portfolio .modal .modal-body {
+#portfolio .modal .modal-body, #recent-works .modal .modal-body {
     padding: 0;
     max-height: none;
     width: 100%;
     text-align: center;
 }
-#portfolio .modal .modal-body img {
+#portfolio .modal .modal-body img, #recent-works .modal .modal-body img {
     max-width: 100%;
 }
 .modal .icon-remove {
@@ -493,7 +496,7 @@ header .dropdown-menu:before {
 #services {
     background: url(images/background1-01.jpg);
     background-size: 100%;
-    color: #CBCBCB
+    color: #cceefb
 }
 
 #services h1, #services h2, #services h3, #services h4, #services h5, #services h6 {
@@ -522,7 +525,7 @@ header .dropdown-menu:before {
 
 #bottom {
     background: #232323;
-    color: #6f6f6f
+    color: #8c8c8c
 }
 
 #bottom h4 {
@@ -535,11 +538,11 @@ header .dropdown-menu:before {
 }
 
 #bottom a {
-    color: #6f6f6f
+    color: #a7a7a7 !important
 }
 
 #bottom a:hover {
-    color: #FF7F00
+    color: #FF7F00 !important
 }
 
 #bottom ul.address > li {
@@ -609,11 +612,11 @@ ul.rss li::before {
     background: #333;
     padding-top: 15px;
     padding-bottom: 15px;
-    color: #666
+    color: #8c8c8c
 }
 
 #footer a {
-    color: #666
+    color: #a7a7a7
 }
 
 #footer a:hover {
@@ -925,7 +928,9 @@ ul.gallery li .preview:hover .links {
     -o-transform: translate(0, 0);
     transform: translate(0, 0)
 }
-
+#faqs {
+    border-bottom: solid 1px #ddd
+}
 ul.faq {
     list-style: none;
     margin: 0
@@ -964,28 +969,30 @@ ul.faq li > div h3 {
     margin-top: 150px;
     margin-bottom: 150px
 }
-#checkout-form>.span6 {
 
-}
+/***** gift for new year *****/
 #gift {
     background: url(images/background-01.jpg) repeat-x;
-    background-size: 100%;
     text-align: center;
     color: #fff;
     padding-bottom: 45px;
 }
-.gift-title {
-    font-size: 22px;
+.my-div {
+    width: 720px;
+    float: left;
 }
-.gift-link>a:hover {
-    text-decoration: underline;
+.my-note {margin-bottom: 40px; color: #cceefb}
+.clock {
+
 }
 .clock>li {
+    width: 150px;
     height: 150px;
+    margin-right: 40px;
     display: inline-block;
-    width: 25%;
     float: left
 }
+.second-wrapper {margin-right: 0 !important}
 .day-wrapper, .second-wrapper {
     background: url(images/count1.png) top center no-repeat
 }
@@ -994,15 +1001,16 @@ ul.faq li > div h3 {
 }
 .clock>li>p:first-child {
     font-size: 70px;
-    line-height: 88px;
-    letter-spacing: 0.57em;
-    text-align: center;
-    margin-left: 0.37em;
+    line-height: 90px;
+    letter-spacing: 37px;
+    padding-left: 18px;
+    margin-bottom: 20px
 }
 .clock>li>p:last-child {
-    font-size: 25px;
-    margin-top: 20px
+    font-size: 20px;
 }
+/***** end gift *****/
+
 #search-box {
     background: #fff;
     margin:0;
@@ -1085,4 +1093,7 @@ ul.faq li > div h3 {
     font-size: 13px;
     text-decoration: underline;
     float: right;
+}
+a:hover {
+    color: #d97525
 }

@@ -179,22 +179,13 @@
 <!--gift for customer-->
 <section id="gift">
     <div class="container">
-        <div class="row-fluid">
-            <div class="span7">
-                <h3 class="gift-title">IZIWEB, ĐĂNG KÝ CÓ NGAY WEBSITE</h3>
-                <p class="my-note gap">Giải pháp nhanh nhất, tốt nhất, rẻ nhất và dễ dàng nhất để tăng doanh số bán hàng nhanh chóng</p>
-                <ul id="clock" class="clock unstyled">
-                    <li class="day-wrapper">
-                        <p>22</p>
-                        <p>Ngày</p>
-                    </li>
-                    <li class="day-wrapper"><p>22</p><p>giờ</p></li>
-                    <li class="day-wrapper"><p>22</p><p>phút</p></li>
-                    <li class="day-wrapper"><p>22</p><p>giây</p></li>
-                    <div style="clear: both"></div>
-                </ul>
-                <h3 class="gift-link"><a href="#">KHUYẾN MẠI DUY NHẤT DỊP TẾT ẤT MÙI</a></h3>
-            </div>
+        <div class="my-div">
+            <h3 class="gift-title">IZIWEB, ĐĂNG KÝ CÓ NGAY WEBSITE</h3>
+            <p class="my-note">Giải pháp nhanh nhất, tốt nhất, rẻ nhất và dễ dàng nhất để tăng doanh số bán hàng nhanh chóng</p>
+            <ul id="clock" class="clock unstyled">
+                <li class="day-wrapper"><p>31</p><p>Ngày</p></li><li class="hour-wrapper"><p>01</p><p>Giờ</p></li><li class="minute-wrapper"><p>45</p><p>Phút</p></li><li class="second-wrapper"><p>35</p><p>Giây</p></li><div style="clear: both"></div>
+            </ul>
+            <h3 class="gift-link"><a href="<?= home_url() ?>/?page_id=35">KHUYẾN MẠI DUY NHẤT DỊP TẾT ẤT MÙI</a></h3>
         </div>
     </div>
 </section>
@@ -233,13 +224,13 @@
             <!--/Item 1-->
             <?php endwhile; endif; ?>
 
-            
+
         </ul>
     </div>
 
 </section>
 
-<section id="clients" class="main">
+<section style="display: none" id="clients" class="main">
     <div class="container">
         <div class="row-fluid">
             <div class="span2">

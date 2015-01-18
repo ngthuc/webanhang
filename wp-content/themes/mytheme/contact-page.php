@@ -54,7 +54,7 @@
                 phố Vọng, Đồng Tâm, Hai Bà Trưng, Hà Nội
             </p>
             <p>
-                <i class="icon-envelope"></i> iziweb@gmail.com
+                <i class="icon-envelope"></i> contact.iziweb@gmail.com
             </p>
             <p>
                 <i class="icon-phone"></i> 01695.959.890

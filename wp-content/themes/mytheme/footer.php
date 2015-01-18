@@ -8,23 +8,23 @@
 
             <!--Contact Form-->
             <div class="span3">
-                <h4>ĐỊA CHỈ</h4>
+                <h4>Iziweb</h4>
                 <ul class="unstyled address">
                     <li>
-                        <i class="icon-home"></i><strong>Địa chỉ:</strong> P1603 chung cư A2 ngõ 229<br> phố Vọng,
+                        <i class="icon-home"></i> Địa chỉ: P1603, chung cư A2, ngõ 229 phố Vọng,
                         Hai Bà Trưng, Hà Nội
                     </li>
                     <li>
                         <i class="icon-envelope"></i>
-                        <strong>Email: </strong> iziweb@gmail.com
+                        Email: contact.iziweb@gmail.com
                     </li>
                     <li>
-                        <i class="icon-globe"></i>
-                        <strong>Website:</strong> www.webanhang.net
+                        <i class="icon-phone-sign"></i>
+                        Điện thoại: 01695.959.890
                     </li>
                     <li>
                         <i class="icon-phone"></i>
-                        <strong>Hot line: 01695.959.890</strong>
+                        Hot line: 01695.959.890
                     </li>
                 </ul>
             </div>
@@ -36,9 +36,9 @@
                 <div>
                     <ul class="arrow">
                         <li><a href="<?= home_url() ?>/?page_id=27">Giới thiệu</a></li>
+                        <li><a href="<?= home_url() ?>/?page_id=7">Tính năng</a></li>
                         <li><a href="<?= home_url() ?>/?page_id=29">Hỗ trợ</a></li>
                         <li><a href="<?= home_url() ?>/?page_id=31">Điều khoản sử dụng</a></li>
-                        <li><a href="<?= home_url() ?>/?cat=1">Tin tức</a></li>
                         <li><a href="<?= home_url() ?>/?cat=2">Tuyển dụng</a></li>
                         <li><a href="<?= home_url() ?>/?page_id=9">Liên hệ</a></li>
                     </ul>
@@ -63,40 +63,21 @@
             <!--End Archives-->
 
             <div class="span3">
-                <h4>FLICKR GALLERY</h4>
+                <h4>Iziweb - Một sản phẩm của AllBlue</h4>
                 <div class="row-fluid first">
-                    <ul class="thumbnails">
-                        <li class="span3">
-
+                    <ul class="unstyled address">
+                        <li>
+                            <i class="icon-globe"></i> Tham khảo webiste của chúng tôi:
+                            <a target="_blank" href="http://allblueviet.com">http://allblueviet.com</a>.
                         </li>
-                        <li class="span3">
-
+                        <li>
+                            <i class="icon-envelope"></i> Email: allblueviet@gmail.com
                         </li>
-                        <li class="span3">
-
-                        </li>
-                        <li class="span3">
-
+                        <li>
+                            <i class="icon-shield"></i> "Giương buồm ra biển khơi, tìm kiếm sự tự do và kho báu!"
                         </li>
                     </ul>
                 </div>
-                <div class="row-fluid">
-                    <ul class="thumbnails">
-                        <li class="span3">
-
-                        </li>
-                        <li class="span3">
-
-                        </li>
-                        <li class="span3">
-
-                        </li>
-                        <li class="span3">
-
-                        </li>
-                    </ul>
-                </div>
-
             </div>
 
         </div>
@@ -112,23 +93,23 @@
     <div class="container">
         <div class="row-fluid">
             <div class="span5 cp">
-                &copy; 2014 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">AllBlue</a>. All Rights Reserved.
+                &copy; 2014 Iziweb. All Rights Reserved.
             </div>
             <!--/Copyright-->
 
             <div class="span6">
                 <ul class="social pull-right">
-                    <li><a href="#"><i class="icon-facebook"></i></a></li>
-                    <li><a href="#"><i class="icon-twitter"></i></a></li>
-                    <li><a href="#"><i class="icon-pinterest"></i></a></li>
-                    <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                    <li><a href="#"><i class="icon-google-plus"></i></a></li>
-                    <li><a href="#"><i class="icon-youtube"></i></a></li>
-                    <li><a href="#"><i class="icon-tumblr"></i></a></li>
-                    <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                    <li><a href="#"><i class="icon-rss"></i></a></li>
-                    <li><a href="#"><i class="icon-github-alt"></i></a></li>
-                    <li><a href="#"><i class="icon-instagram"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-facebook"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-twitter"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-pinterest"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-linkedin"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-google-plus"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-youtube"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-tumblr"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-dribbble"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-rss"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-github-alt"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-instagram"></i></a></li>
                 </ul>
             </div>
 
@@ -186,8 +167,8 @@
 <script src="<?= bloginfo('template_directory') ?>/js/main.js"></script>
 <!-- Required javascript files for Slider -->
 <script src="<?= bloginfo('template_directory') ?>/js/jquery.ba-cond.min.js"></script>
-<script src="<?= bloginfo('template_directory') ?>/js/jquery.slitslider.js"></script>
 <script src="<?= bloginfo('template_directory') ?>/js/jquery.countdown.js"></script>
+<script src="<?= bloginfo('template_directory') ?>/js/slider.js"></script>
 <!-- /Required javascript files for Slider -->
 
 <!-- SL Slider -->
