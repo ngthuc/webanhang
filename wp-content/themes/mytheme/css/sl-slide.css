@@ -39,6 +39,7 @@
 }
 .slider-control>i {
     font-size: 60px;
+    font-size: 6rem;
     color: #f9f9f9;
     cursor: pointer
 }
@@ -53,23 +54,27 @@
 }
 .readmore-slider1 {
     position: absolute;
-    bottom: 10%;
-    left: 10%;
-    width: 250px;
-    height: 60px;
-    background: url(../images/button-hover.png) 0 0 no-repeat
+    bottom: 8%;
+    left: 7.6%;
+    width: 20%;
+    height: 12.5%;
+    background: url(../images/button-hover.png) 0 0 no-repeat;
+    background-size: 100% 100%
 }
 .readmore-slider1:hover {
-    background: url(../images/button.png) 0 0 no-repeat
+    background: url(../images/button.png) 0 0 no-repeat;
+    background-size: 100% 100%
 }
 .readmore-slider2 {
     position: absolute;
     bottom: 10%;
     left: 6%;
-    width: 370px;
-    height: 60px;
-    background: url(../images/button2.png) 0 0 no-repeat
+    width: 27%;
+    height: 12.5%;
+    background: url(../images/button2.png) 0 0 no-repeat;
+    background-size: 100% 100%
 }
 .readmore-slider2:hover {
-    background: url(../images/button2-hover.png) 0 0 no-repeat
+    background: url(../images/button2-hover.png) 0 0 no-repeat;
+    background-size: 100% 100%
 }

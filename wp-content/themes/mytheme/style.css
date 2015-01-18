@@ -45,8 +45,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
     box-sizing: border-box
 }
 
+html { font-size: 62.5%; }
+
 body {
     font-size: 14px;
+    font-size: 1.4em;
     color: #34495e;
     background: #fafafa;
     font-family: Tahoma, sans-serif;
@@ -993,6 +996,7 @@ ul.faq li > div h3 {
 }
 .clock>li>p:first-child {
     font-size: 70px;
+    font-size: 7rem;
     line-height: 88px;
     letter-spacing: 0.57em;
     text-align: center;
