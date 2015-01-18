@@ -16,7 +16,7 @@
                     </li>
                     <li>
                         <i class="icon-envelope"></i>
-                        Email: iziweb@gmail.com
+                        Email: contact.iziweb@gmail.com
                     </li>
                     <li>
                         <i class="icon-phone-sign"></i>
@@ -63,12 +63,15 @@
             <!--End Archives-->
 
             <div class="span3">
-                <h4>Về AllBlue</h4>
+                <h4>Iziweb - Một sản phẩm của AllBlue</h4>
                 <div class="row-fluid first">
                     <ul class="unstyled address">
                         <li>
-                            <i class="icon-star"></i> Iziweb - Bán hàng online thật dễ là một sản phẩm của AllBlue. Tham khảo website của chúng tôi:
-                            <a href="http://allblueviet.com">http://allblueviet.com</a>.
+                            <i class="icon-globe"></i> Tham khảo webiste của chúng tôi:
+                            <a target="_blank" href="http://allblueviet.com">http://allblueviet.com</a>.
+                        </li>
+                        <li>
+                            <i class="icon-envelope"></i> Email: allblueviet@gmail.com
                         </li>
                         <li>
                             <i class="icon-shield"></i> "Giương buồm ra biển khơi, tìm kiếm sự tự do và kho báu!"
@@ -90,23 +93,23 @@
     <div class="container">
         <div class="row-fluid">
             <div class="span5 cp">
-                &copy; 2014 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">AllBlue</a>. All Rights Reserved.
+                &copy; 2014 Iziweb. All Rights Reserved.
             </div>
             <!--/Copyright-->
 
             <div class="span6">
                 <ul class="social pull-right">
-                    <li><a href="#"><i class="icon-facebook"></i></a></li>
-                    <li><a href="#"><i class="icon-twitter"></i></a></li>
-                    <li><a href="#"><i class="icon-pinterest"></i></a></li>
-                    <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                    <li><a href="#"><i class="icon-google-plus"></i></a></li>
-                    <li><a href="#"><i class="icon-youtube"></i></a></li>
-                    <li><a href="#"><i class="icon-tumblr"></i></a></li>
-                    <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                    <li><a href="#"><i class="icon-rss"></i></a></li>
-                    <li><a href="#"><i class="icon-github-alt"></i></a></li>
-                    <li><a href="#"><i class="icon-instagram"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-facebook"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-twitter"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-pinterest"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-linkedin"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-google-plus"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-youtube"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-tumblr"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-dribbble"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-rss"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-github-alt"></i></a></li>
+                    <li><a target="_blank" href="#"><i class="icon-instagram"></i></a></li>
                 </ul>
             </div>
 

@@ -525,7 +525,7 @@ header .dropdown-menu:before {
 
 #bottom {
     background: #232323;
-    color: #6f6f6f
+    color: #8c8c8c
 }
 
 #bottom h4 {
@@ -538,11 +538,11 @@ header .dropdown-menu:before {
 }
 
 #bottom a {
-    color: #6f6f6f
+    color: #a7a7a7 !important
 }
 
 #bottom a:hover {
-    color: #FF7F00
+    color: #FF7F00 !important
 }
 
 #bottom ul.address > li {
@@ -612,11 +612,11 @@ ul.rss li::before {
     background: #333;
     padding-top: 15px;
     padding-bottom: 15px;
-    color: #666
+    color: #8c8c8c
 }
 
 #footer a {
-    color: #666
+    color: #a7a7a7
 }
 
 #footer a:hover {
