@@ -7,9 +7,43 @@
 <?php get_header() ?>
 <?php include_once 'inc/breadcrumb.php'; ?>
 
+<!--script google map-->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+    function initialize() {
+        var myLatlng = new google.maps.LatLng(20.99549,105.844354);
+        var mapOptions = {
+            zoom: 16,
+            center: myLatlng
+        };
+
+        var map = new google.maps.Map(document.getElementById('footer-maps'), mapOptions);
+
+        var contentString = '<p class="location">P1603 chung cư A2, ngõ 229 phố Vọng,<br /> Hai Bà Trưng, Hà Nội</p>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString,
+            width: 200
+        });
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Allblue Team'
+        });
+        infowindow.open(map, marker);
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
 <?php wp_register(); ?>
-<section class="no-margin">
-    <iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.au/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Dhaka,+Dhaka+Division,+Bangladesh&amp;aq=0&amp;oq=dhaka+ban&amp;sll=40.714353,-74.005973&amp;sspn=0.836898,1.815491&amp;ie=UTF8&amp;hq=&amp;hnear=Dhaka+Division,+Bangladesh&amp;t=m&amp;ll=24.542126,90.293884&amp;spn=0.124922,0.411301&amp;z=8&amp;output=embed">
+<section class="no-margin" style="margin-top: 50px">
+    <div class="container">
+        <div style="width: 100%; height: 370px" id="footer-maps">
+
+        </div>
+    </div>
 </section>
 
 <section id="contact-page" class="container">
@@ -41,7 +75,7 @@
             </form>
         </div>
 
-        <div class="span3">
+        <div class="span4">
             <h4>Iziweb</h4>
             <p>Iziweb là một sản phẩm của <a href="http://allblueviet.com">AllBlue</a></p>
             <p>AllBlue là đơn vị chuyên nghiệp về thiết kế website, thiết kế đồ họa, các dịch vụ SEO từ khóa,
@@ -68,6 +102,3 @@
 </section>
 
 <?php get_footer(); ?>
-
-
-

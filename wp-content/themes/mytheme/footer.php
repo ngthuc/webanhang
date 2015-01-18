@@ -164,12 +164,9 @@
 
 <script src="<?= bloginfo('template_directory') ?>/js/vendor/jquery-1.9.1.min.js"></script>
 <script src="<?= bloginfo('template_directory') ?>/js/vendor/bootstrap.min.js"></script>
+
 <script src="<?= bloginfo('template_directory') ?>/js/main.js"></script>
-<!-- Required javascript files for Slider -->
-<script src="<?= bloginfo('template_directory') ?>/js/jquery.ba-cond.min.js"></script>
 <script src="<?= bloginfo('template_directory') ?>/js/jquery.countdown.js"></script>
-<script src="<?= bloginfo('template_directory') ?>/js/slider.js"></script>
-<!-- /Required javascript files for Slider -->
 
 <script>
     $(document).ready(function () {
@@ -181,38 +178,8 @@
         }
     });
 </script>
-<!-- SL Slider -->
+<!-- Count down -->
 <script type="text/javascript">
-    $(function () {
-        var Page = (function () {
-
-            var $navArrows = $('#nav-arrows'),
-                    slitslider = $('#slider').slitslider({
-                autoplay: true
-            }),
-                    init = function () {
-                        initEvents();
-                    },
-                    initEvents = function () {
-                        $navArrows.children(':last').on('click', function () {
-                            slitslider.next();
-                            return false;
-                        });
-
-                        $navArrows.children(':first').on('click', function () {
-                            slitslider.previous();
-                            return false;
-                        });
-                    };
-
-            return {init: init};
-
-        })();
-
-        Page.init();
-    });
-
-
     $(document).ready(function () {
         $("#clock").countdown("2015/02/18 12:00:00", function (event) {
             var $this = $(this).html(event.strftime(
@@ -239,7 +206,7 @@
     }
 
 </script>
-<!-- /SL Slider -->
+<!-- /Count down -->
 <?php wp_footer(); ?>
 </body>
 </html>
