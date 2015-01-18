@@ -35,22 +35,20 @@
 .slider-control {
     position: absolute;
     top: 45%;
+    height: 10%;
+    font-size: 4em;
     z-index: 1000;
-}
-.slider-control>i {
-    font-size: 60px;
-    font-size: 6rem;
-    color: #f9f9f9;
+    color: #fff;
     cursor: pointer
 }
-.slider-control>i:hover {
-    color: #fff
+.slider-control:hover {
+    color: #fea967
 }
 .slider-left {
-    left: 3%
+    left: 2%
 }
 .slider-right {
-    right: 3%
+    right: 2%
 }
 .readmore-slider1 {
     position: absolute;
@@ -70,7 +68,7 @@
     bottom: 10%;
     left: 6%;
     width: 27%;
-    height: 12.5%;
+    height: 12%;
     background: url(../images/button2.png) 0 0 no-repeat;
     background-size: 100% 100%
 }

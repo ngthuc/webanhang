@@ -1,4 +1,16 @@
 $(document).ready(function() {
+
+    // count down
+//    $("#clock").countdown("2015/02/18 12:00:00", function(event) {
+//        var $this = $(this).html(event.strftime(
+//            '<li class="day-wrapper"><p>%D</p><p>Ngày</p></li>'
+//                + '<li class="hour-wrapper"><p>%H</p><p>Giờ</p></li>'
+//                + '<li class="minute-wrapper"><p>%M</p><p>Phút</p></li>'
+//                + '<li class="second-wrapper"><p>%S</p><p>Giây</p></li>'
+//                + '<div style="clear: both"></div>'
+//        ));
+//    });
+
     //Goto Top
     $('.gototop').click(function(event) {
         event.preventDefault();

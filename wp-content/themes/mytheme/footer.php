@@ -168,19 +168,6 @@
 <script src="<?= bloginfo('template_directory') ?>/js/slider.js"></script>
 <!-- /Required javascript files for Slider -->
 
-<!--- count down --->
-<script>
-    $(document).ready(function() {
-        $("#clock").countdown("2015/02/18 12:00:00", function(event) {
-            var $this = $(this).html(event.strftime(
-                '<li class="day-wrapper"><p>%D</p><p>Ngày</p></li>'
-                    + '<li class="hour-wrapper"><p>%H</p><p>Giờ</p></li>'
-                    + '<li class="minute-wrapper"><p>%M</p><p>Phút</p></li>'
-                    + '<li class="second-wrapper"><p>%S</p><p>Giây</p></li>'));
-        });
-    });
-</script>
-
 <?php wp_footer(); ?>
 </body>
 </html>

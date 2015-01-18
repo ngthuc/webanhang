@@ -974,13 +974,13 @@ ul.faq li > div h3 {
 }
 #gift {
     background: url(images/background-01.jpg) repeat-x;
-    background-size: 100%;
     text-align: center;
     color: #fff;
     padding-bottom: 45px;
 }
-.gift-title {
-    font-size: 22px;
+.my-note {margin-bottom: 40px}
+.clock {
+
 }
 .clock>li {
     height: 150px;
@@ -989,22 +989,39 @@ ul.faq li > div h3 {
     float: left
 }
 .day-wrapper, .second-wrapper {
-    background: url(images/count1.png) top center no-repeat
+    background: url(images/count1.png) top center no-repeat;
+    backgound-size: 100% 100%
 }
 .hour-wrapper, .minute-wrapper {
-    background: url(images/count1.png) top center no-repeat
+    background: url(images/count1.png) top center no-repeat;
+    backgound-size: 100% 100%
 }
-.clock>li>p:first-child {
-    font-size: 70px;
-    font-size: 7rem;
-    line-height: 88px;
-    letter-spacing: 0.57em;
-    text-align: center;
-    margin-left: 0.37em;
+.clock {}
+@media screen and (min-width: 1200px) {
+    .clock>li>p:first-child {
+        font-size: 400%;
+        letter-spacing: 0.8em;
+        text-align: center;
+        margin-left: 18%;
+        line-height: 155%;
+    }
+    .clock>li>p:last-child {
+        font-size: 200%;
+        margin-top: 20px
+    }
 }
-.clock>li>p:last-child {
-    font-size: 25px;
-    margin-top: 20px
+@media screen and (max-width: 1200px) {
+    .clock>li>p:first-child {
+        font-size: 200%;
+        letter-spacing: 0.8em;
+        text-align: center;
+        margin-left: 18%;
+        line-height: 155%;
+    }
+    .clock>li>p:last-child {
+        font-size: 200%;
+        margin-top: 20px
+    }
 }
 #search-box {
     background: #fff;

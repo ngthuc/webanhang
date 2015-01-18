@@ -16,12 +16,8 @@
     <!-- /slider-content -->
 
     <!--Slider Next Prev button-->
-    <div class="slider-control slider-left">
-        <i class="icon-angle-left"></i>
-    </div>
-    <div class="slider-control slider-right">
-        <i class="icon-angle-right"></i>
-    </div>
+    <div class="slider-control slider-left"><i class="icon-angle-left"></i></div>
+    <div class="slider-control slider-right"><i class="icon-angle-right"></i></div>
     <!--/Slider Next Prev button-->
 </section>
 <!--/Slider-->
