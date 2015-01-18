@@ -38,9 +38,9 @@
 </script>
 
 <?php wp_register(); ?>
-<section class="no-margin" style="margin-top: 50px">
+<section class="no-margin" style="margin-top: 40px">
     <div class="container">
-        <div style="width: 100%; height: 370px" id="footer-maps">
+        <div style="width: 100%; height: 380px" id="footer-maps">
 
         </div>
     </div>
@@ -76,7 +76,7 @@
         </div>
 
         <div class="span4">
-            <h4>Iziweb</h4>
+            <h4 style="margin-bottom: 30px">Iziweb</h4>
             <p>Iziweb là một sản phẩm của <a href="http://allblueviet.com">AllBlue</a></p>
             <p>AllBlue là đơn vị chuyên nghiệp về thiết kế website, thiết kế đồ họa, các dịch vụ SEO từ khóa,
             quản trị nội dung, marketing online. Với mong muốn đem đến các giải pháp bán hàng online
