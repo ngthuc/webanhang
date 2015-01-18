@@ -176,6 +176,7 @@
         var location = window.location + '';
         $('#main-menu ul li').removeClass('active');
         $('#main-menu ul li a[href="' + window.location + '"]').parent("li").addClass('active');
+        $('#main-menu ul li a[href="' + window.location + '"]').parent("li").parent("ul").parent("li").addClass('active');
         if (location === 'http://iziweb.vn/') {
             $('#main-menu ul li:first').addClass('active');
         }
