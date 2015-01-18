@@ -969,60 +969,48 @@ ul.faq li > div h3 {
     margin-top: 150px;
     margin-bottom: 150px
 }
-#checkout-form>.span6 {
 
-}
+/***** gift for new year *****/
 #gift {
     background: url(images/background-01.jpg) repeat-x;
     text-align: center;
     color: #fff;
     padding-bottom: 45px;
 }
-.my-note {margin-bottom: 40px}
+.my-div {
+    width: 720px;
+    float: left;
+}
+.my-note {margin-bottom: 40px; color: #cceefb}
 .clock {
 
 }
 .clock>li {
+    width: 150px;
     height: 150px;
+    margin-right: 40px;
     display: inline-block;
-    width: 25%;
     float: left
 }
+.second-wrapper {margin-right: 0 !important}
 .day-wrapper, .second-wrapper {
-    background: url(images/count1.png) top center no-repeat;
-    backgound-size: 100% 100%
+    background: url(images/count1.png) top center no-repeat
 }
 .hour-wrapper, .minute-wrapper {
-    background: url(images/count1.png) top center no-repeat;
-    backgound-size: 100% 100%
+    background: url(images/count1.png) top center no-repeat
 }
-.clock {}
-@media screen and (min-width: 1200px) {
-    .clock>li>p:first-child {
-        font-size: 400%;
-        letter-spacing: 0.8em;
-        text-align: center;
-        margin-left: 18%;
-        line-height: 155%;
-    }
-    .clock>li>p:last-child {
-        font-size: 200%;
-        margin-top: 20px
-    }
+.clock>li>p:first-child {
+    font-size: 70px;
+    line-height: 90px;
+    letter-spacing: 37px;
+    padding-left: 18px;
+    margin-bottom: 20px
 }
-@media screen and (max-width: 1200px) {
-    .clock>li>p:first-child {
-        font-size: 200%;
-        letter-spacing: 0.8em;
-        text-align: center;
-        margin-left: 18%;
-        line-height: 155%;
-    }
-    .clock>li>p:last-child {
-        font-size: 200%;
-        margin-top: 20px
-    }
+.clock>li>p:last-child {
+    font-size: 20px;
 }
+/***** end gift *****/
+
 #search-box {
     background: #fff;
     margin:0;
