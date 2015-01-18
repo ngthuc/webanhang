@@ -167,46 +167,6 @@
 
 <script src="<?= bloginfo('template_directory') ?>/js/main.js"></script>
 <script src="<?= bloginfo('template_directory') ?>/js/jquery.countdown.js"></script>
-
-<script>
-    $(document).ready(function () {
-        var location = window.location + '';
-        $('#main-menu ul li').removeClass('active');
-        $('#main-menu ul li a[href="' + window.location + '"]').parent("li").addClass('active');
-        if (location === 'http://iziweb.vn/') {
-            $('#main-menu ul li:first').addClass('active');
-        }
-    });
-</script>
-<!-- Count down -->
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#clock").countdown("2015/02/18 12:00:00", function (event) {
-            var $this = $(this).html(event.strftime(
-                    '<li class="day-wrapper"><p>%D</p><p>ngày</p></li>'
-                    + '<li class="hour-wrapper"><p>%H</p><p>giờ</p></li>'
-                    + '<li class="minute-wrapper"><p>%M</p><p>phút</p></li>'
-                    + '<li class="second-wrapper"><p>%S</p><p>giây</p></li>'));
-        });
-    });
-
-    i = 0;
-    setInterval(function () {
-        myBlink()
-    }, 500);
-    function myBlink() {
-        if (i == 0) {
-            i = 1;
-            $(".gift-link>a").css("color", "#fff");
-        }
-        else {
-            i = 0;
-            $(".gift-link>a").css("color", "#ff7f00");
-        }
-    }
-
-</script>
-<!-- /Count down -->
 <?php wp_footer(); ?>
 </body>
 </html>
