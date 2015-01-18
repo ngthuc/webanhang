@@ -67,8 +67,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <a id="logo" class="pull-left" href="<?= home_url() ?>"></a>
-            <div class="nav-collapse collapse pull-right">
+            <a id="logo" class="pull-left" href="<?= bloginfo('home') ?>/"></a>
+            <div id="main-menu" class="nav-collapse collapse pull-right">
                 <ul class="nav">
                     <li class="active"><a href="<?= home_url() ?>">Trang chủ</a></li>
                     <li><a href="<?= home_url() ?>/?page_id=5">Kho giao diện</a></li>
@@ -93,5 +93,6 @@
             </div><!--/.nav-collapse -->
         </div>
     </div>
+    
 </header>
 <!-- /header -->
