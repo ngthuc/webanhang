@@ -68,7 +68,7 @@
                     <ul class="unstyled address">
                         <li>
                             <i class="icon-globe"></i> Tham khảo webiste của chúng tôi:
-                            <a target="_blank" href="http://allblueviet.com">http://allblueviet.com</a>.
+                            <a target="_blank" href="http://allblueviet.com">http://allblueviet.com</a>
                         </li>
                         <li>
                             <i class="icon-envelope"></i> Email: allblueviet@gmail.com
@@ -154,7 +154,7 @@
             <form class="form-inline" action="" method="post" id="form-login">
                 <?php echo get_avatar($curr_user->ID); ?>
                 <label>Tài khoản: <?php echo $curr_user->data->user_nicename ?></label>
-                <a href="<?php echo wp_logout_url(home_url()); ?>" class="btn btn-primary">Sing out</a>
+                <a href="<?php echo wp_logout_url(home_url()); ?>" class="btn btn-primary">Sign out</a>
             </form>
 
         </div>
@@ -164,9 +164,8 @@
 
 <script src="<?= bloginfo('template_directory') ?>/js/vendor/jquery-1.9.1.min.js"></script>
 <script src="<?= bloginfo('template_directory') ?>/js/vendor/bootstrap.min.js"></script>
+
 <script src="<?= bloginfo('template_directory') ?>/js/main.js"></script>
-<!-- Required javascript files for Slider -->
-<script src="<?= bloginfo('template_directory') ?>/js/jquery.ba-cond.min.js"></script>
 <script src="<?= bloginfo('template_directory') ?>/js/jquery.countdown.js"></script>
 <script src="<?= bloginfo('template_directory') ?>/js/slider.js"></script>
 <!-- /Required javascript files for Slider -->

@@ -45,15 +45,15 @@
     <script src="<?php echo bloginfo('template_directory') ?>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="<?php echo bloginfo('template_directory') ?>/images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo bloginfo('template_directory') ?>/images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo bloginfo('template_directory') ?>/images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo bloginfo('template_directory') ?>/images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="<?php echo bloginfo('template_directory') ?>/images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="<?php echo bloginfo('template_directory') ?>/images/favicon.ico">
 
 	<?php if ( is_singular() ) wp_enqueue_script('comment-reply'); ?>
 
 	<?php wp_head(); ?>
+
+    <script>
+        site_url = '<?= home_url() ?>';
+    </script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -70,7 +70,7 @@
             <a id="logo" class="pull-left" href="<?= bloginfo('home') ?>/"></a>
             <div id="main-menu" class="nav-collapse collapse pull-right">
                 <ul class="nav">
-                    <li class="active"><a href="<?= home_url() ?>">Trang chủ</a></li>
+                    <li><a href="<?= home_url() ?>">Trang chủ</a></li>
                     <li><a href="<?= home_url() ?>/?page_id=5">Kho giao diện</a></li>
                     <li><a href="<?= home_url() ?>/?page_id=7">Tính năng</a></li>
                     <li class="dropdown">

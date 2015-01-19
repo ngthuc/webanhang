@@ -7,10 +7,42 @@
 <?php get_header() ?>
 <?php include_once 'inc/breadcrumb.php'; ?>
 
-<?php wp_register(); ?>
-<section class="no-margin">
-    <iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-    src=""></iframe>
+<!--script google map-->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+    function initialize() {
+        var myLatlng = new google.maps.LatLng(20.99549,105.844354);
+        var mapOptions = {
+            zoom: 16,
+            center: myLatlng
+        };
+
+        var map = new google.maps.Map(document.getElementById('footer-maps'), mapOptions);
+
+        var contentString = '<p class="location">P1603 chung cư A2, ngõ 229 phố Vọng,<br /> Hai Bà Trưng, Hà Nội</p>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString,
+            width: 200
+        });
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Allblue Team'
+        });
+        infowindow.open(map, marker);
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<section class="no-margin" style="margin-top: 40px">
+    <div class="container">
+        <div style="width: 100%; height: 380px" id="footer-maps">
+
+        </div>
+    </div>
 </section>
 
 <section id="contact-page" class="container">
@@ -42,8 +74,8 @@
             </form>
         </div>
 
-        <div class="span3">
-            <h4>Iziweb</h4>
+        <div class="span4">
+            <h4 style="margin-bottom: 30px">Iziweb</h4>
             <p>Iziweb là một sản phẩm của <a href="http://allblueviet.com">AllBlue</a></p>
             <p>AllBlue là đơn vị chuyên nghiệp về thiết kế website, thiết kế đồ họa, các dịch vụ SEO từ khóa,
             quản trị nội dung, marketing online. Với mong muốn đem đến các giải pháp bán hàng online
@@ -69,6 +101,3 @@
 </section>
 
 <?php get_footer(); ?>
-
-
-
